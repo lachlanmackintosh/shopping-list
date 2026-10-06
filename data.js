@@ -155,6 +155,14 @@ var SHOPPING = {
               qty: "~1.05 L/week",
               note: "150 mL/day",
               options: [{ gold: true, name: "Organic cold-pressed OJ" }]
+            },
+            {
+              id: "coconut-water",
+              name: "Coconut water",
+              options: [
+                { gold: true, name: "Raw C Coconut Water" },
+                { name: "Other 100% pure coconut water with nothing added" }
+              ]
             }
           ]
         },
