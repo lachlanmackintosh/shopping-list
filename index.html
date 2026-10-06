@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3ecdf">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Lockie's weekly shopping list.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Shopping">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Shopping</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <p class="kicker">For the week</p>
+      <div class="title-row">
+        <div class="wordmark">
+          <h1>Shopping</h1>
+          <svg class="scribble" viewBox="0 0 200 14" aria-hidden="true">
+            <path d="M3 9 C 28 3, 52 13, 88 7 S 148 2, 197 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="count" id="count" aria-live="polite">0 of 0</p>
+      </div>
+      <div class="bar" id="bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-label="Items ticked"><span id="bar"></span></div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Lists"></div>
+    </header>
+    <main id="list" role="tabpanel"></main>
+  </div>
+
+  <div class="overlay" id="sheet" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="grab" aria-hidden="true"></div>
+      <button type="button" class="sheet-close" id="sheet-close">Close</button>
+      <p class="sheet-kicker" id="sheet-kicker">Choose one</p>
+      <h2 id="sheet-title"></h2>
+      <p class="sheet-qty" id="sheet-qty" hidden></p>
+      <div id="sheet-options"></div>
+    </div>
+  </div>
+
+  <div class="overlay center" id="confirm" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+      <h2 id="confirm-title">New shop?</h2>
+      <p>This unticks everything. The options you've chosen stay as they are.</p>
+      <div class="dialog-actions">
+        <button type="button" class="btn btn-quiet" id="confirm-cancel">Keep ticks</button>
+        <button type="button" class="btn btn-ink" id="confirm-ok">Clear ticks</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
