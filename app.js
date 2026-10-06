@@ -19,6 +19,7 @@
       data.ticks = data.ticks && typeof data.ticks === "object" ? data.ticks : {};
       data.choices = data.choices && typeof data.choices === "object" ? data.choices : {};
       data.custom = data.custom && typeof data.custom === "object" ? data.custom : {};
+      migrateChoices(data);
       return data;
     } catch (err) {
       return blankState();
@@ -33,21 +34,57 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }
 
+  var LEGACY_MILK = [
+    "Organic full-fat pasteurised",
+    "A2 full-fat",
+    "Kefir"
+  ];
+
   function optionsOf(item) {
     if (!item.options || !item.options.length) return [];
     return item.options.map(function (opt) {
-      if (typeof opt === "string") return { name: opt, note: "" };
-      return { name: opt.name, note: opt.note || "" };
+      if (typeof opt === "string") return { name: opt, note: "", gold: false };
+      return { name: opt.name, note: opt.note || "", gold: opt.gold === true };
     });
   }
 
   function choiceIndex(item) {
     var options = optionsOf(item);
     if (!options.length) return 0;
-    var n = state.choices[item.id];
-    if (typeof n !== "number") n = parseInt(n, 10);
-    if (isNaN(n) || n < 0 || n >= options.length) return 0;
-    return n;
+    var saved = state.choices[item.id];
+    if (typeof saved !== "string") return 0;
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].name === saved) return i;
+    }
+    return 0;
+  }
+
+  function migrateChoices(data) {
+    var savedMilk = data.choices.milk;
+    if (typeof savedMilk === "number") {
+      var legacyName = LEGACY_MILK[savedMilk];
+      var milkNames = [];
+      var milk = findCatalogItem("milk");
+      if (milk) milkNames = optionsOf(milk).map(function (opt) { return opt.name; });
+      if (legacyName && milkNames.indexOf(legacyName) !== -1) data.choices.milk = legacyName;
+      else delete data.choices.milk;
+    }
+
+    SHOPPING.groups.forEach(function (group) {
+      group.sections.forEach(function (section) {
+        section.items.forEach(function (item) {
+          var saved = data.choices[item.id];
+          var options = optionsOf(item);
+          if (typeof saved === "number") {
+            if (options[saved]) data.choices[item.id] = options[saved].name;
+            else delete data.choices[item.id];
+          } else if (typeof saved === "string") {
+            var stillThere = options.some(function (opt) { return opt.name === saved; });
+            if (!stillThere) delete data.choices[item.id];
+          }
+        });
+      });
+    });
   }
 
   function customItems(section) {
@@ -119,22 +156,9 @@
     return svg;
   }
 
-  function metaLine(item, opt, index, multiple) {
-    var line = el("span", "choice-meta");
-    var wrote = false;
-    if (multiple && index === 0) {
-      line.appendChild(el("span", "gold", "Gold standard"));
-      wrote = true;
-    } else if (multiple) {
-      line.appendChild(document.createTextNode("Option " + (index + 1)));
-      wrote = true;
-    }
-    if (opt.note) {
-      if (wrote) line.appendChild(document.createTextNode(" · "));
-      line.appendChild(document.createTextNode(opt.note));
-      wrote = true;
-    }
-    return wrote ? line : null;
+  function noteLine(opt) {
+    if (!opt.note) return null;
+    return el("span", "choice-meta", opt.note);
   }
 
   function renderItem(item, section) {
@@ -163,7 +187,7 @@
     if (options.length === 1) {
       var single = el("div", "product");
       single.appendChild(el("span", "product-name", options[0].name));
-      var singleMeta = metaLine(item, options[0], 0, false);
+      var singleMeta = noteLine(options[0]);
       if (singleMeta) single.appendChild(singleMeta);
       row.appendChild(single);
     } else if (options.length > 1) {
@@ -174,7 +198,7 @@
       choice.setAttribute("data-choose", item.id);
       choice.setAttribute("aria-label", "Change option for " + item.name + ". Current option: " + chosen.name);
       choice.appendChild(el("span", "product-name", chosen.name));
-      var meta = metaLine(item, chosen, index, true);
+      var meta = noteLine(chosen);
       if (meta) choice.appendChild(meta);
       row.appendChild(choice);
     }
@@ -353,7 +377,7 @@
       var copy = el("span");
       var kicker = el("span", "opt-kicker");
       kicker.appendChild(document.createTextNode("Option " + (index + 1)));
-      if (index === 0) {
+      if (opt.gold) {
         kicker.appendChild(document.createTextNode(" · "));
         kicker.appendChild(el("span", "gold", "Gold standard"));
       }
@@ -431,7 +455,10 @@
     document.getElementById("sheet-options").addEventListener("click", function (event) {
       var btn = event.target.closest("[data-option]");
       if (!btn || !openItemId) return;
-      state.choices[openItemId] = parseInt(btn.getAttribute("data-option"), 10);
+      var picked = findCatalogItem(openItemId);
+      var pickedOptions = picked ? optionsOf(picked) : [];
+      var pickedIndex = parseInt(btn.getAttribute("data-option"), 10);
+      if (pickedOptions[pickedIndex]) state.choices[openItemId] = pickedOptions[pickedIndex].name;
       saveState();
       closeSheet();
       render();
@@ -474,6 +501,7 @@
   }
 
   assertIds();
+  saveState();
   renderTabs();
   bind();
   render();

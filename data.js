@@ -1,11 +1,12 @@
 /* Lockie's shopping list — edit this file to change items.
-   The first option is the gold standard and the default.
+   The first option is the default. Mark the gold standard with gold: true
+   (it can be any option). That label only shows in the option picker.
    qty and note are optional. An option note (discount code, and similar)
    shows when that option is chosen.
    Keep each id the same once it exists — ticks and choices are remembered by id.
 
    An item looks like:
-     { id: "eggs", name: "Eggs", qty: "28/week", options: [ { name: "Pasture-raised eggs" } ] }
+     { id: "eggs", name: "Eggs", qty: "28/week", options: [ { gold: true, name: "Pasture-raised eggs" } ] }
 */
 var SHOPPING = {
   groups: [
@@ -22,7 +23,7 @@ var SHOPPING = {
               name: "Greek yoghurt",
               qty: "2.1 kg/week",
               options: [
-                { name: "Jalna Organic Farm to Pot Greek yoghurt (full-fat)" },
+                { gold: true, name: "Jalna Organic Farm to Pot Greek yoghurt (full-fat)" },
                 { name: "Other full-fat Greek yoghurt" },
                 { name: "Full-fat Skyr" }
               ]
@@ -32,7 +33,7 @@ var SHOPPING = {
               name: "Whey protein (unflavoured)",
               qty: "350 g/week",
               options: [
-                { name: "Chief Whey", note: "Code HGH10" },
+                { gold: true, name: "Chief Whey", note: "Code HGH10" },
                 { name: "Professional Whey isolate", note: "Code HGH5" },
                 { name: "Protein Supplies whey", note: "Code CHARLEY10" }
               ]
@@ -41,22 +42,27 @@ var SHOPPING = {
               id: "eggs",
               name: "Eggs",
               qty: "28/week",
-              options: [{ name: "Pasture-raised eggs" }]
+              options: [{ gold: true, name: "Pasture-raised eggs" }]
             },
             {
               id: "cottage-cheese",
               name: "Cottage cheese",
               qty: "700 g/week",
-              options: [{ name: "Full-fat cottage cheese" }]
+              options: [{ gold: true, name: "Full-fat cottage cheese" }]
             },
             {
               id: "milk",
               name: "Milk",
               qty: "1.75 L/week",
               options: [
+                { gold: true, name: "Raw organic grass-fed cow's milk" },
+                { name: "Cold-pressed milk" },
+                { name: "Raw A2 milk" },
+                { name: "Organic full-fat A2 (pasteurised)" },
                 { name: "Organic full-fat pasteurised" },
-                { name: "A2 full-fat" },
-                { name: "Kefir" }
+                { name: "Kefir" },
+                { name: "Goat's milk" },
+                { name: "Raw goat's milk" }
               ]
             },
             {
@@ -64,7 +70,7 @@ var SHOPPING = {
               name: "Cheese",
               qty: "140 g/week",
               options: [
-                { name: "Cheddar" },
+                { gold: true, name: "Cheddar" },
                 { name: "Parmesan" },
                 { name: "Gorgonzola" }
               ]
@@ -82,7 +88,7 @@ var SHOPPING = {
               name: "Main protein",
               qty: "~1.26 kg/week",
               options: [
-                { name: "Grass-fed grass-finished lean beef mince" },
+                { gold: true, name: "Grass-fed grass-finished lean beef mince" },
                 { name: "Bison" },
                 { name: "Venison" },
                 { name: "Chicken thigh" },
@@ -101,13 +107,13 @@ var SHOPPING = {
               name: "Sourdough",
               qty: "~14 slices/week",
               note: "2 per day",
-              options: [{ name: "Organic sourdough" }]
+              options: [{ gold: true, name: "Organic sourdough" }]
             },
             {
               id: "carb-base",
               name: "Carb base",
               options: [
-                { name: "Orange sweet potato (~350 g cooked per day; usual pick)" },
+                { gold: true, name: "Orange sweet potato (~350 g cooked per day; usual pick)" },
                 { name: "Organic white rice (~100 g dry per day; heavy gym days)" }
               ]
             }
@@ -122,7 +128,7 @@ var SHOPPING = {
               name: "Berries",
               qty: "1.4 kg/week",
               options: [
-                { name: "Organic mixed (strawberries/blueberries/raspberries)" },
+                { gold: true, name: "Organic mixed (strawberries/blueberries/raspberries)" },
                 { name: "Frozen organic berries" }
               ]
             },
@@ -148,7 +154,7 @@ var SHOPPING = {
               name: "Orange juice",
               qty: "~1.05 L/week",
               note: "150 mL/day",
-              options: [{ name: "Organic cold-pressed OJ" }]
+              options: [{ gold: true, name: "Organic cold-pressed OJ" }]
             }
           ]
         },
@@ -159,13 +165,13 @@ var SHOPPING = {
             {
               id: "evoo",
               name: "Extra virgin olive oil",
-              options: [{ name: "Australian EVOO" }]
+              options: [{ gold: true, name: "Australian EVOO" }]
             },
             {
               id: "sweetener",
               name: "Sweetener",
               options: [
-                { name: "Pure maple syrup" },
+                { gold: true, name: "Pure maple syrup" },
                 { name: "Raw honey" }
               ]
             },
@@ -175,14 +181,14 @@ var SHOPPING = {
               id: "cooking-fat",
               name: "Cooking fat",
               options: [
-                { name: "Beef tallow (Best of the Bone)", note: "Code HOLISTICGUT15" },
+                { gold: true, name: "Beef tallow (Best of the Bone)", note: "Code HOLISTICGUT15" },
                 { name: "Ghee" }
               ]
             },
             {
               id: "salt",
               name: "Salt",
-              options: [{ name: "Salt with batch heavy-metal testing" }]
+              options: [{ gold: true, name: "Salt with batch heavy-metal testing" }]
             },
             {
               id: "herbs",
@@ -194,7 +200,7 @@ var SHOPPING = {
               name: "Ferments",
               note: "Optional",
               options: [
-                { name: "Sauerkraut" },
+                { gold: true, name: "Sauerkraut" },
                 { name: "Kimchi" },
                 { name: "Pickles" }
               ]
@@ -224,7 +230,7 @@ var SHOPPING = {
               id: "omega-3",
               name: "Omega-3",
               options: [
-                { name: "Nordic Naturals Ultimate Omega" },
+                { gold: true, name: "Nordic Naturals Ultimate Omega" },
                 { name: "Nordic Naturals cod liver oil" }
               ]
             },
@@ -233,7 +239,7 @@ var SHOPPING = {
               name: "Magnesium",
               note: "Only if food comes up short",
               options: [
-                { name: "Magnesium glycinate (Life Extension or Now Foods)" }
+                { gold: true, name: "Magnesium glycinate (Life Extension or Now Foods)" }
               ]
             }
           ]
@@ -253,7 +259,7 @@ var SHOPPING = {
               name: "Surface / glass / mirrors / floors",
               note: "Benches, glass, mirrors, and sealed floors",
               options: [
-                { name: "Koh Universal Cleaner" },
+                { gold: true, name: "Koh Universal Cleaner" },
                 { name: "Ecostore Ultra Sensitive Multi-Purpose Cleaner" }
               ]
             },
@@ -262,7 +268,7 @@ var SHOPPING = {
               name: "Disinfectant",
               note: "Raw meat, illness, or a high-risk bathroom only",
               options: [
-                { name: "Hydro-E HOCl Hospital Grade Disinfectant" },
+                { gold: true, name: "Hydro-E HOCl Hospital Grade Disinfectant" },
                 { name: "SimplyClean Simply NO Mould / HOCl-style disinfectant" }
               ]
             },
@@ -271,7 +277,7 @@ var SHOPPING = {
               name: "Bathroom",
               note: "Soap scum and scale",
               options: [
-                { name: "SimplyClean HealthyClean Bathroom" },
+                { gold: true, name: "SimplyClean HealthyClean Bathroom" },
                 { name: "Ecostore Bathroom & Shower Cleaner Concentrate" }
               ]
             },
@@ -279,7 +285,7 @@ var SHOPPING = {
               id: "dishwasher",
               name: "Dishwasher",
               options: [
-                { name: "Kin Kin Dishwasher Powder" },
+                { gold: true, name: "Kin Kin Dishwasher Powder" },
                 { name: "Hudstone Dishwashing Powder" }
               ]
             },
@@ -287,7 +293,7 @@ var SHOPPING = {
               id: "dish-liquid",
               name: "Dish liquid",
               options: [
-                { name: "Ecostore Ultra Sensitive Dish Liquid" },
+                { gold: true, name: "Ecostore Ultra Sensitive Dish Liquid" },
                 { name: "Earth Choice Sensitive Concentrated Dishwashing Liquid" }
               ]
             },
@@ -295,7 +301,7 @@ var SHOPPING = {
               id: "laundry",
               name: "Laundry",
               options: [
-                { name: "Resparkle Fragrance-Free Laundry Powder" },
+                { gold: true, name: "Resparkle Fragrance-Free Laundry Powder" },
                 { name: "Abode Zero Laundry Powder / Liquid" }
               ]
             },
@@ -304,7 +310,7 @@ var SHOPPING = {
               name: "Stain remover / soaker",
               note: "Blood, sweat, sunscreen, whites",
               options: [
-                { name: "Hudstone Pre Soaker / Stain Remover" },
+                { gold: true, name: "Hudstone Pre Soaker / Stain Remover" },
                 { name: "Kin Kin Laundry Soaker & Stain Remover" }
               ]
             },
@@ -312,7 +318,7 @@ var SHOPPING = {
               id: "hand-wash",
               name: "Hand wash",
               options: [
-                { name: "Ecostore Ultra Sensitive Hand Wash" },
+                { gold: true, name: "Ecostore Ultra Sensitive Hand Wash" },
                 { name: "Abode Sensitive / fragrance-free hand wash" }
               ]
             },
@@ -320,7 +326,7 @@ var SHOPPING = {
               id: "toilet",
               name: "Toilet",
               options: [
-                { name: "Citric acid powder + toilet brush" },
+                { gold: true, name: "Citric acid powder + toilet brush" },
                 { name: "Abode Toilet Gel" }
               ]
             }
