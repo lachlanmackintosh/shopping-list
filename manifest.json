@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Shopping",
-  "short_name": "Shopping",
+  "name": "Shopping List",
+  "short_name": "Shopping List",
   "description": "Lockie's weekly shopping list.",
   "start_url": "./index.html",
   "scope": "./",

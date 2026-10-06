@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Shopping bag">
+  <rect width="512" height="512" fill="#F3EBDD"/>
+
+  <!-- baguette tucked into the bag, crust facing out -->
+  <g transform="rotate(-34 360 196)">
+    <rect x="324" y="78" width="70" height="210" rx="35" fill="#C47A3E"/>
+    <rect x="348" y="86" width="28" height="194" rx="14" fill="#E2B56A"/>
+  </g>
+
+  <!-- paper grocery bag -->
+  <path fill="#C9A36E" d="M128 252h256l-24 176a30 30 0 0 1-30 26H182a30 30 0 0 1-30-26z"/>
+  <path fill="#B48C58" d="M156 400h200l-10 28a30 30 0 0 1-30 26H182a30 30 0 0 1-30-26z"/>
+  <path fill="#D8BC90" d="M152 272h34l-10 164h-18z"/>
+
+  <!-- rim and opening -->
+  <rect x="112" y="214" width="288" height="62" rx="18" fill="#B48C58"/>
+  <rect x="112" y="214" width="288" height="24" rx="12" fill="#D4B48A"/>
+  <rect x="148" y="238" width="216" height="28" rx="14" fill="#6E4C34"/>
+
+  <!-- leafy greens -->
+  <path fill="#3E4C32" d="M176 236c-8-52 2-104 36-128 8 48 10 96 2 128-12-6-26-8-38 0z"/>
+  <path fill="#5E7048" d="M214 240C206 170 230 96 268 70c18 58 12 122-8 170-16-8-32-8-46 0z"/>
+  <path fill="#526242" d="M268 232c8-48 36-96 78-118-6 52-22 96-48 122-12-6-22-6-30-4z"/>
+  <path fill="#7E8E68" d="M236 228c2-36 22-70 48-86-2 34-14 64-32 86-6-2-12-2-16 0z"/>
+</svg>
