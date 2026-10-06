@@ -34,12 +34,6 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }
 
-  var LEGACY_MILK = [
-    "Organic full-fat pasteurised",
-    "A2 full-fat",
-    "Kefir"
-  ];
-
   function optionsOf(item) {
     if (!item.options || !item.options.length) return [];
     return item.options.map(function (opt) {
@@ -60,9 +54,14 @@
   }
 
   function migrateChoices(data) {
+    var legacyMilk = [
+      "Organic full-fat pasteurised",
+      "A2 full-fat",
+      "Kefir"
+    ];
     var savedMilk = data.choices.milk;
     if (typeof savedMilk === "number") {
-      var legacyName = LEGACY_MILK[savedMilk];
+      var legacyName = legacyMilk[savedMilk];
       var milkNames = [];
       var milk = findCatalogItem("milk");
       if (milk) milkNames = optionsOf(milk).map(function (opt) { return opt.name; });
