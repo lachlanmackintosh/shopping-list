@@ -204,6 +204,14 @@ var SHOPPING = {
                 { name: "Kimchi" },
                 { name: "Pickles" }
               ]
+            },
+            {
+              id: "chewing-gum",
+              name: "Chewing gum",
+              options: [
+                { gold: true, name: "Natural chicle-based gum (no aspartame or artificial colours)" },
+                { name: "Xylitol-sweetened natural gum" }
+              ]
             }
           ]
         },
@@ -240,6 +248,84 @@ var SHOPPING = {
               note: "Only if food comes up short",
               options: [
                 { gold: true, name: "Magnesium glycinate (Life Extension or Now Foods)" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "care",
+      label: "Personal care",
+      sections: [
+        {
+          id: "personal-care",
+          items: [
+            {
+              id: "toilet-paper",
+              name: "Toilet paper",
+              options: [
+                { gold: true, name: "Who Gives A Crap bamboo (unscented)" },
+                { name: "Unscented, unbleached recycled or bamboo toilet paper" }
+              ]
+            },
+            {
+              id: "face-cleanser",
+              name: "Face cleanser",
+              options: [
+                { gold: true, name: "The Ordinary Squalane Cleanser", note: "PM only" }
+              ]
+            },
+            {
+              id: "face-moisturiser",
+              name: "Face moisturiser",
+              options: [
+                { gold: true, name: "The Ordinary Natural Moisturizing Factors + HA" }
+              ]
+            },
+            {
+              id: "body-moisturiser",
+              name: "Body moisturiser",
+              options: [
+                { gold: true, name: "MooGoo Full Cream Moisturiser" }
+              ]
+            },
+            {
+              id: "shampoo",
+              name: "Shampoo",
+              options: [
+                { gold: true, name: "MooGoo Milk Shampoo" }
+              ]
+            },
+            {
+              id: "conditioner",
+              name: "Conditioner",
+              options: [
+                { gold: true, name: "MooGoo Cream Conditioner" }
+              ]
+            },
+            {
+              id: "body-wash",
+              name: "Body wash",
+              options: [
+                { gold: true, name: "MooGoo Milk Wash (soap-free)" },
+                { name: "Unscented natural bar soap" }
+              ]
+            },
+            {
+              id: "hair-clay",
+              name: "Hair clay",
+              options: [
+                { gold: true, name: "Aotearoad Natural Hair Clay – Medium Hold (old formula)" },
+                { name: "Hunter Lab hair clay" }
+              ]
+            },
+            {
+              id: "deodorant",
+              name: "Deodorant",
+              options: [
+                { gold: true, name: "Tuttofare Natural Deodorant", note: "Current, fades by evening, better option coming" },
+                { name: "Other aluminium-free, fragrance-free natural deodorant" }
               ]
             }
           ]
