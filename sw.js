@@ -1,6 +1,6 @@
 /* Offline cache for the shopping list.
    When you add a file (a font, an icon), list it in ASSETS and bump CACHE. */
-var CACHE = "shopping-v3";
+var CACHE = "shopping-v4";
 var ASSETS = [
   "./",
   "./index.html",
@@ -12,6 +12,7 @@ var ASSETS = [
   "./icons/icon-512.png",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
+  "./icons/icon.svg",
   "./fonts/caveat-latin.woff2",
   "./fonts/fraunces-latin.woff2",
   "./fonts/fraunces-italic-latin.woff2",
