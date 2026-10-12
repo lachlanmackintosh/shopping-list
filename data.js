@@ -71,8 +71,7 @@ var SHOPPING = {
               qty: "140 g/week",
               options: [
                 { gold: true, name: "Cheddar" },
-                { name: "Parmesan" },
-                { name: "Gorgonzola" }
+                { name: "Parmesan" }
               ]
             }
           ]
@@ -227,7 +226,14 @@ var SHOPPING = {
           id: "optional-rotation",
           title: "Optional / rotation",
           items: [
-            { id: "bone-broth", name: "Bone broth" },
+            {
+              id: "bone-broth",
+              name: "Bone broth",
+              note: "1 heaped tsp per mug",
+              options: [
+                { gold: true, name: "Best of the Bone Original bone broth concentrate paste", note: "$32.99 · bestofthebone.com · code HOLISTICGUT15" }
+              ]
+            },
             { id: "coffee-tea", name: "Coffee / green tea / yerba mate" },
             { id: "pom-juice", name: "Pomegranate or tart-cherry juice" }
           ]
@@ -245,9 +251,20 @@ var SHOPPING = {
             {
               id: "omega-3",
               name: "Omega-3",
+              note: "1 tsp each morning with food · keep refrigerated · use within 3 months",
               options: [
-                { gold: true, name: "Nordic Naturals Ultimate Omega" },
-                { name: "Nordic Naturals cod liver oil" }
+                { gold: true, name: "Nordic Naturals Arctic Cod Liver Oil, orange, 473 mL", note: "$94.55 · Aus Health Nutrition" },
+                { name: "Nordic Naturals Ultimate Omega, 180 caps (best value)", note: "$129.95 · 2/day with food · Aus Health Nutrition" },
+                { name: "Nordic Naturals Ultimate Omega, 120 caps", note: "$99.95 · 2/day with food · Aus Health Nutrition" },
+                { name: "Nordic Naturals Ultimate Omega, 60 caps", note: "$59.95 · 2/day with food · Aus Health Nutrition" }
+              ]
+            },
+            {
+              id: "vitamin-d3-k2",
+              name: "Vitamin D3 + K2",
+              note: "2 drops/day (not 10)",
+              options: [
+                { gold: true, name: "Seeking Health D3 + K2 Drops, 30 mL", note: "$41.10 · iHerb AU" }
               ]
             },
             {
