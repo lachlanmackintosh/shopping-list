@@ -182,6 +182,17 @@ var SHOPPING = {
                 { name: "Raw honey" }
               ]
             },
+            {
+              id: "dark-chocolate",
+              name: "Dark chocolate (85%)",
+              qty: "1–2 × 80 g bars/week",
+              note: "Max 15 g/day (2 squares) on the yoghurt bowl",
+              options: [
+                { gold: true, name: "Alter Eco Organic Classic Blackout 85% (80 g)", note: "Organic, fair trade · about $8.60–$9.95 · Harris Farm, IGA, health food stores" },
+                { name: "Loving Earth Organic 85% (80 g)", note: "Organic, coconut-nectar sweetened · about $6.90" },
+                { name: "Pana Organic dark (85%)", note: "Organic · Australian-made" }
+              ]
+            },
             { id: "ceylon-cinnamon", name: "Ceylon cinnamon", note: "Optional" },
             { id: "bee-pollen", name: "Bee pollen", note: "Optional" },
             {
