@@ -345,73 +345,125 @@ var SHOPPING = {
       label: "Personal care",
       sections: [
         {
-          id: "personal-care",
+          id: "care-main",
           items: [
             {
-              id: "toilet-paper",
-              name: "Toilet paper",
-              options: [
-                { gold: true, name: "Who Gives A Crap bamboo (unscented)" },
-                { name: "Unscented, unbleached recycled or bamboo toilet paper" }
-              ]
-            },
-            {
-              id: "face-cleanser",
-              name: "Face cleanser",
-              options: [
-                { gold: true, name: "The Ordinary Squalane Cleanser", note: "PM only" }
-              ]
-            },
-            {
-              id: "face-moisturiser",
+              id: "care-face-moisturiser",
               name: "Face moisturiser",
               options: [
-                { gold: true, name: "The Ordinary Natural Moisturizing Factors + HA" }
+                { gold: true, name: "The Ordinary Natural Moisturizing Factors + HA" },
+                { name: "MooGoo Full Cream Moisturiser" }
               ]
             },
             {
-              id: "body-moisturiser",
+              id: "care-face-cleanser",
+              name: "Face cleanser",
+              options: [
+                { gold: true, name: "The Ordinary Squalane Cleanser" },
+                { name: "MooGoo cleanser (variant TBC)" }
+              ]
+            },
+            {
+              id: "care-body-moisturiser",
               name: "Body moisturiser",
               options: [
-                { gold: true, name: "MooGoo Full Cream Moisturiser" }
+                { gold: true, name: "The Ordinary Natural Moisturizing Factors + Inulin" },
+                { name: "MooGoo Full Cream Moisturiser" }
               ]
             },
             {
-              id: "shampoo",
+              id: "care-body-wash",
+              name: "Body wash",
+              options: [
+                { gold: true, name: "Thankyou Lemon Myrtle & Oat Milk" },
+                { name: "Sukin" }
+              ]
+            },
+            {
+              id: "care-hand-wash",
+              name: "Hand wash",
+              options: [
+                { gold: true, name: "Thankyou Lemon Myrtle & Oat Milk Hand & Body Wash 1 L refill" },
+                { name: "ecostore Ultra Sensitive Hand Wash" }
+              ]
+            },
+            {
+              id: "care-shampoo",
               name: "Shampoo",
               options: [
                 { gold: true, name: "MooGoo Milk Shampoo" }
               ]
             },
             {
-              id: "conditioner",
+              id: "care-conditioner",
               name: "Conditioner",
               options: [
                 { gold: true, name: "MooGoo Cream Conditioner" }
               ]
             },
             {
-              id: "body-wash",
-              name: "Body wash",
+              id: "care-hair-styling",
+              name: "Hair styling",
               options: [
-                { gold: true, name: "MooGoo Milk Wash (soap-free)" },
-                { name: "Unscented natural bar soap" }
+                { gold: true, name: "PrimalPantry Tallow Hair Clay (trialling)" }
               ]
             },
             {
-              id: "hair-clay",
-              name: "Hair clay",
+              id: "care-toothbrush",
+              name: "Toothbrush",
               options: [
-                { gold: true, name: "Aotearoad Natural Hair Clay – Medium Hold (old formula)" },
-                { name: "Hunter Lab hair clay" }
+                { gold: true, name: "Toxin Dodger soft horsehair toothbrush" }
               ]
             },
             {
-              id: "deodorant",
+              id: "care-dental-floss",
+              name: "Dental floss",
+              options: [
+                { gold: true, name: "Toxin Dodger silk floss" },
+                { name: "Turtle Tribe silk floss" },
+                { name: "RADIUS Pure Silk" }
+              ]
+            },
+            {
+              id: "care-toothpaste",
+              name: "Toothpaste",
+              options: [
+                { gold: true, name: "Grants hydroxyapatite whitening" },
+                { name: "MooGoo hydroxyapatite" },
+                { name: "Grin Pro Enamel Care + Nano-Hydroxyapatite" },
+                { name: "Red Seal Baking Soda + Hydroxyapatite" }
+              ]
+            },
+            {
+              id: "care-deodorant",
               name: "Deodorant",
               options: [
-                { gold: true, name: "Tuttofare Natural Deodorant", note: "Current, fades by evening, better option coming" },
-                { name: "Other aluminium-free, fragrance-free natural deodorant" }
+                { gold: true, name: "MooGoo" },
+                { name: "Noosa Basics" },
+                { name: "KIND-LY Lime & Frankincense" },
+                { name: "Woohoo" },
+                { name: "Patricks" },
+                { name: "Two Dudes" }
+              ]
+            }
+          ]
+        },
+        {
+          id: "care-optional",
+          title: "Optional",
+          items: [
+            {
+              id: "care-opt-the-ordinary-multi-peptide-copper-peptid",
+              name: "Skincare",
+              options: [
+                { gold: true, name: "The Ordinary Multi-Peptide + Copper Peptides" }
+              ]
+            },
+            {
+              id: "care-opt-the-ordinary-squalane",
+              name: "Skincare",
+              options: [
+                { gold: true, name: "The Ordinary squalane" }
               ]
             }
           ]
@@ -421,85 +473,122 @@ var SHOPPING = {
     {
       id: "cleaning",
       label: "Cleaning",
-      note: "Buy option 1 unless it is unavailable, too expensive, or it performs poorly. Option 2 is the fallback.",
+      note: "Laundry rule: no fabric softener or scent boosters.",
       sections: [
         {
-          id: "cleaning-jobs",
+          id: "cleaning-main",
           items: [
             {
-              id: "surface",
-              name: "Surface / glass / mirrors / floors",
-              note: "Benches, glass, mirrors, and sealed floors",
+              id: "clean-general-surfaces-kitchen",
+              name: "General surfaces/kitchen",
               options: [
                 { gold: true, name: "Koh Universal Cleaner" },
-                { name: "Ecostore Ultra Sensitive Multi-Purpose Cleaner" }
+                { name: "ecostore Ultra Sensitive Multi-Purpose" }
               ]
             },
             {
-              id: "disinfectant",
-              name: "Disinfectant",
-              note: "Raw meat, illness, or a high-risk bathroom only",
+              id: "clean-targeted-disinfection",
+              name: "Targeted disinfection",
               options: [
-                { gold: true, name: "Hydro-E HOCl Hospital Grade Disinfectant" },
-                { name: "SimplyClean Simply NO Mould / HOCl-style disinfectant" }
+                { gold: true, name: "Hydro-E HOCl Hospital Grade Disinfectant" }
               ]
             },
             {
-              id: "bathroom",
-              name: "Bathroom",
-              note: "Soap scum and scale",
-              options: [
-                { gold: true, name: "SimplyClean HealthyClean Bathroom" },
-                { name: "Ecostore Bathroom & Shower Cleaner Concentrate" }
-              ]
-            },
-            {
-              id: "dishwasher",
-              name: "Dishwasher",
-              options: [
-                { gold: true, name: "Kin Kin Dishwasher Powder" },
-                { name: "Hudstone Dishwashing Powder" }
-              ]
-            },
-            {
-              id: "dish-liquid",
-              name: "Dish liquid",
-              options: [
-                { gold: true, name: "Ecostore Ultra Sensitive Dish Liquid" },
-                { name: "Earth Choice Sensitive Concentrated Dishwashing Liquid" }
-              ]
-            },
-            {
-              id: "laundry",
-              name: "Laundry",
+              id: "clean-laundry-detergent",
+              name: "Laundry detergent",
               options: [
                 { gold: true, name: "Resparkle Fragrance-Free Laundry Powder" },
-                { name: "Abode Zero Laundry Powder / Liquid" }
+                { name: "Herbon Fragrance-Free" },
+                { name: "Abode Zero Laundry Powder" }
               ]
             },
             {
-              id: "stain-remover",
-              name: "Stain remover / soaker",
-              note: "Blood, sweat, sunscreen, whites",
+              id: "clean-laundry-soaker-stain",
+              name: "Laundry soaker/stain",
               options: [
-                { gold: true, name: "Hudstone Pre Soaker / Stain Remover" },
-                { name: "Kin Kin Laundry Soaker & Stain Remover" }
+                { gold: true, name: "Hudstone Soaker" },
+                { name: "Kin Kin Laundry Soaker" },
+                { name: "MiEco sodium percarbonate" }
               ]
             },
             {
-              id: "hand-wash",
-              name: "Hand wash",
+              id: "clean-dishwasher",
+              name: "Dishwasher",
               options: [
-                { gold: true, name: "Ecostore Ultra Sensitive Hand Wash" },
-                { name: "Abode Sensitive / fragrance-free hand wash" }
+                { gold: true, name: "Hudstone Dishwashing Powder" },
+                { name: "Kin Kin Dishwasher Powder" }
               ]
             },
             {
-              id: "toilet",
+              id: "clean-hand-dishwashing",
+              name: "Hand dishwashing",
+              options: [
+                { gold: true, name: "Earth Choice Sensitive Concentrated" },
+                { name: "ecostore Ultra Sensitive Dish" },
+                { name: "Abode Zero Dish Liquid" }
+              ]
+            },
+            {
+              id: "clean-bathroom",
+              name: "Bathroom",
+              options: [
+                { gold: true, name: "SimplyClean HealthyClean Bathroom" },
+                { name: "ecostore Bathroom Concentrate" }
+              ]
+            },
+            {
+              id: "clean-toilet",
               name: "Toilet",
               options: [
-                { gold: true, name: "Citric acid powder + toilet brush" },
-                { name: "Abode Toilet Gel" }
+                { gold: true, name: "Abode Rosemary & Mint Toilet Gel" }
+              ]
+            },
+            {
+              id: "clean-mould",
+              name: "Mould",
+              options: [
+                { gold: true, name: "SimplyClean Simply NO Mould" }
+              ]
+            },
+            {
+              id: "clean-descaling",
+              name: "Descaling",
+              options: [
+                { gold: true, name: "Citric acid (any brand)" }
+              ]
+            },
+            {
+              id: "clean-multipurpose-wipes",
+              name: "Multipurpose wipes",
+              options: [
+                { gold: true, name: "CleanLIFE Surface Vinegar Wipes (trial)" }
+              ]
+            },
+            {
+              id: "clean-hand-sanitiser",
+              name: "Hand sanitiser",
+              options: [
+                { gold: true, name: "PURELL Antiseptic Hand Foam 72%" }
+              ]
+            }
+          ]
+        },
+        {
+          id: "cleaning-optional",
+          title: "Optional",
+          items: [
+            {
+              id: "clean-opt-koala-eco-fragrance-free-laundry-stain-s",
+              name: "Laundry stain spray",
+              options: [
+                { gold: true, name: "Koala Eco Fragrance-Free Laundry Stain Spray" }
+              ]
+            },
+            {
+              id: "clean-opt-koala-eco-fragrance-free-oxygenated-blea",
+              name: "Oxygen bleach",
+              options: [
+                { gold: true, name: "Koala Eco Fragrance-Free Oxygenated Bleach" }
               ]
             }
           ]

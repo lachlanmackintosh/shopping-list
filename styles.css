@@ -766,3 +766,31 @@ body.locked {
     transition: none !important;
   }
 }
+
+.product.has-options {
+  padding-bottom: 0.7rem;
+}
+
+.optbtn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.45rem;
+  min-height: 2rem;
+  padding: 0.2rem 0.75rem;
+  border: 1px solid rgba(82, 98, 66, 0.45);
+  border-radius: 999px;
+  background: none;
+  color: var(--olive);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.optbtn:active {
+  transform: scale(0.97);
+}
+
+.item.is-ticked .optbtn {
+  opacity: 0.62;
+}

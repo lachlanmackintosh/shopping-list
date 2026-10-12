@@ -192,13 +192,15 @@
     } else if (options.length > 1) {
       var index = choiceIndex(item);
       var chosen = options[index];
-      var choice = el("button", "choice");
-      choice.type = "button";
-      choice.setAttribute("data-choose", item.id);
-      choice.setAttribute("aria-label", "Change option for " + item.name + ". Current option: " + chosen.name);
+      var choice = el("div", "product has-options");
       choice.appendChild(el("span", "product-name", chosen.name));
       var meta = noteLine(chosen);
       if (meta) choice.appendChild(meta);
+      var more = el("button", "optbtn", "Other options");
+      more.type = "button";
+      more.setAttribute("data-choose", item.id);
+      more.setAttribute("aria-label", "Other options for " + item.name + ". Current option: " + chosen.name);
+      choice.appendChild(more);
       row.appendChild(choice);
     }
 
