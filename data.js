@@ -13,87 +13,114 @@ var SHOPPING = {
     {
       id: "food",
       label: "Food",
+      note: "Weekly for two (Lockie + Margo), full 7-night rotation. Slow cooker nights swap in; extras listed below.",
       sections: [
         {
           id: "dairy-protein",
-          title: "Dairy & protein",
+          title: "Dairy, eggs & whey",
           items: [
             {
               id: "greek-yoghurt",
               name: "Greek yoghurt",
-              qty: "2.1 kg/week",
+              qty: "3.6 kg/week",
+              note: "Yoghurt bowl (Meal 1), both",
               options: [
                 { gold: true, name: "Jalna Organic Farm to Pot Greek yoghurt (full-fat)" },
-                { name: "Other full-fat Greek yoghurt" },
-                { name: "Full-fat Skyr" }
+                { name: "Other plain full-fat organic Greek yoghurt" }
               ]
             },
             {
               id: "whey",
               name: "Whey protein (unflavoured)",
-              qty: "350 g/week",
+              qty: "460 g/week",
+              note: "Lockie 45 g/day, Margo 20 g/day",
               options: [
-                { gold: true, name: "Chief Whey", note: "Code HGH10" },
-                { name: "Professional Whey isolate", note: "Code HGH5" },
-                { name: "Protein Supplies whey", note: "Code CHARLEY10" }
+                { gold: true, name: "Protein Supplies WPC, unflavoured", note: "Code CHARLEY10" },
+                { name: "Chief Whey, unflavoured", note: "Code HGH10" },
+                { name: "Professional Whey isolate, unflavoured", note: "Code HGH5" }
               ]
             },
             {
               id: "eggs",
               name: "Eggs",
-              qty: "28/week",
-              options: [{ gold: true, name: "Pasture-raised eggs" }]
-            },
-            {
-              id: "cottage-cheese",
-              name: "Cottage cheese",
-              qty: "700 g/week",
-              options: [{ gold: true, name: "Full-fat cottage cheese" }]
+              qty: "63/week",
+              note: "Egg meal (Meal 2): Lockie 6, Margo 3",
+              options: [{ gold: true, name: "Pasture-raised eggs (ideally certified organic)" }]
             },
             {
               id: "milk",
               name: "Milk",
-              qty: "1.75 L/week",
+              qty: "3.6 L/week",
               options: [
                 { gold: true, name: "Raw organic grass-fed cow's milk" },
-                { name: "Cold-pressed milk" },
-                { name: "Raw A2 milk" },
                 { name: "Organic full-fat A2 (pasteurised)" },
-                { name: "Organic full-fat pasteurised" },
-                { name: "Kefir" },
-                { name: "Goat's milk" },
-                { name: "Raw goat's milk" }
+                { name: "Raw A2 milk" }
               ]
             },
             {
               id: "cheese",
-              name: "Cheese",
-              qty: "140 g/week",
-              options: [
-                { gold: true, name: "Cheddar" },
-                { name: "Parmesan" }
-              ]
+              name: "Raw aged cheddar",
+              qty: "130 g/week",
+              options: [{ gold: true, name: "Raw or organic aged cheddar" }]
+            },
+            {
+              id: "parmesan",
+              name: "Parmesan",
+              qty: "40 g/week (+40 g per slow cooker cacciatore or ragu)",
+              options: [{ gold: true, name: "Raw parmesan" }]
+            },
+            {
+              id: "butter",
+              name: "Butter",
+              qty: "120 g/week",
+              options: [{ gold: true, name: "Grass-fed grass-finished butter" }]
             }
           ]
         },
         {
           id: "meat-fish",
-          title: "Meat & fish",
-          note: "Third meal protein, ~180 g raw per day.",
+          title: "Meat",
+          note: "Certified organic or grass-fed, HGP-free. Butcher paper, freeze in portions.",
           aside: "No sardines, ever.",
           items: [
             {
-              id: "main-protein",
-              name: "Main protein",
-              qty: "~1.26 kg/week",
-              options: [
-                { gold: true, name: "Grass-fed grass-finished lean beef mince" },
-                { name: "Bison" },
-                { name: "Venison" },
-                { name: "Chicken thigh" },
-                { name: "Salmon (wild-caught, when affordable)" },
-                { name: "Grass-fed grass-finished steak (steak plate)" }
-              ]
+              id: "beef-mince",
+              name: "Beef mince",
+              qty: "1.4 kg/week",
+              options: [{ gold: true, name: "Grass-fed grass-finished lean beef mince (5%)" }]
+            },
+            {
+              id: "chicken-thigh",
+              name: "Chicken thigh",
+              qty: "820 g/week (+430 g for slow cooker cacciatore)",
+              options: [{ gold: true, name: "Organic or free-range chicken thigh fillets" }]
+            },
+            {
+              id: "steak",
+              name: "Steak",
+              qty: "430 g/week",
+              options: [{ gold: true, name: "Grass-fed sirloin" }]
+            },
+            {
+              id: "beef-liver",
+              name: "Beef liver",
+              qty: "80 g/week",
+              note: "Once a week, in the ragu",
+              options: [{ gold: true, name: "Organic or grass-fed beef liver" }]
+            },
+            {
+              id: "beef-chuck",
+              name: "Beef chuck (slow cooker)",
+              qty: "440 g per slow cooker night",
+              note: "Only if swapping in slow cooker chuck & veg (night 4)",
+              options: [{ gold: true, name: "Grass-fed beef chuck" }]
+            },
+            {
+              id: "beef-cheek",
+              name: "Beef cheek (slow cooker)",
+              qty: "370 g per slow cooker night",
+              note: "Only if swapping in slow cooker cheek & liver ragu (night 2); add 50 g liver",
+              options: [{ gold: true, name: "Grass-fed beef cheek" }]
             }
           ]
         },
@@ -104,63 +131,93 @@ var SHOPPING = {
             {
               id: "sourdough",
               name: "Sourdough",
-              qty: "~14 slices/week",
-              note: "2 per day",
-              options: [{ gold: true, name: "Organic sourdough" }]
+              qty: "~21 slices/week (1.05 kg)",
+              note: "Lockie 2 slices, Margo 1, daily",
+              options: [{ gold: true, name: "Organic long-ferment sourdough (flour, water, salt)" }]
             },
             {
-              id: "carb-base",
-              name: "Carb base",
-              options: [
-                { gold: true, name: "Orange sweet potato (~350 g cooked per day; usual pick)" },
-                { name: "Organic white rice (~100 g dry per day; heavy gym days)" }
-              ]
+              id: "potato",
+              name: "White potato",
+              qty: "1.4 kg/week",
+              note: "Peel and cook"
+            },
+            {
+              id: "basmati",
+              name: "White basmati rice",
+              qty: "200 g dry/week (+150 g per cacciatore night)",
+              note: "Rinse, boil in plenty of water, drain",
+              options: [{ gold: true, name: "Indian/Pakistani or Californian white basmati" }]
+            },
+            {
+              id: "rice-penne",
+              name: "Brown rice penne",
+              qty: "170 g dry/week (+180 g per slow cooker ragu)",
+              options: [{ gold: true, name: "San Remo Organic Brown Rice Penne (100% brown rice)" }]
+            },
+            {
+              id: "rice-noodles",
+              name: "Rice noodles",
+              qty: "160 g dry/week",
+              note: "Pho night",
+              options: [{ gold: true, name: "Nutritionist Choice unbleached organic rice noodles", note: "$10.59/200 g · WholeLife Milton" }]
             }
           ]
         },
         {
           id: "fruit-veg",
           title: "Fruit & veg",
+          note: "Organic for berries, kiwi, salad and anything eaten with the skin. Bicarb soak 10–15 min.",
           items: [
-            {
-              id: "berries",
-              name: "Berries",
-              qty: "1.4 kg/week",
-              options: [
-                { gold: true, name: "Organic mixed (strawberries/blueberries/raspberries)" },
-                { name: "Frozen organic berries" }
-              ]
-            },
-            {
-              id: "avocados",
-              name: "Avocados",
-              qty: "~7/week",
-              note: "½ in the egg meal and ½ in the bowl, daily"
-            },
-            { id: "broccoli", name: "Broccoli", qty: "~1.05 kg/week" },
-            { id: "rocket", name: "Rocket", qty: "210 g/week" },
-            { id: "red-onion", name: "Red onion", qty: "350 g/week" },
-            {
-              id: "carrots",
-              name: "Carrots",
-              qty: "700 g/week",
-              note: "One a day as a snack"
-            },
-            { id: "gold-kiwifruit", name: "Gold kiwifruit", qty: "7/week" },
-            { id: "seasonal-fruit", name: "Seasonal fruit", qty: "700 g/week" },
+            { id: "blackberries", name: "Organic blackberries", qty: "910 g/week", note: "Fresh or frozen" },
+            { id: "blueberries", name: "Organic blueberries", qty: "630 g/week", note: "Fresh or frozen" },
+            { id: "strawberries", name: "Organic strawberries", qty: "560 g/week" },
+            { id: "raspberries", name: "Organic raspberries", qty: "560 g/week", note: "Fresh or frozen" },
+            { id: "bananas", name: "Bananas", qty: "~13/week (1.5 kg)", note: "Morning snack, both" },
+            { id: "gold-kiwifruit", name: "Gold kiwifruit", qty: "~7/week (700 g)" },
+            { id: "avocados", name: "Avocados", qty: "~12/week" },
+            { id: "broccoli", name: "Broccoli", qty: "1.85 kg/week", note: "Cook, don't eat raw" },
+            { id: "cos", name: "Cos lettuce", qty: "660 g/week (~3 heads)" },
+            { id: "cucumber", name: "Cucumber", qty: "890 g/week (~7 Lebanese)", note: "Peel if not organic" },
+            { id: "tomato", name: "Organic tomatoes", qty: "1.35 kg/week (~11)" },
+            { id: "capsicum", name: "Organic red capsicum", qty: "600 g/week (~4) (+240 g per cacciatore)" },
+            { id: "red-onion", name: "Red onion", qty: "310 g/week (~2) (+180 g per slow cooker night)" },
+            { id: "carrots", name: "Carrots", qty: "140 g/week (+180 g per slow cooker chuck, +110 g per ragu)", note: "Organic, or scrub/peel" },
+            { id: "garlic", name: "Garlic", qty: "1 bulb" },
+            { id: "dill", name: "Fresh dill", qty: "2 bunches/week" },
+            { id: "coriander", name: "Fresh coriander", qty: "1 bunch/week", note: "Pho night" },
+            { id: "spring-onion", name: "Spring onion", qty: "1 bunch/week" },
+            { id: "lemons", name: "Lemons", qty: "~3/week" },
+            { id: "limes", name: "Limes", qty: "1/week", note: "Pho night" }
+          ]
+        },
+        {
+          id: "drinks",
+          title: "Drinks & broth",
+          items: [
             {
               id: "orange-juice",
               name: "Orange juice",
-              qty: "~1.05 L/week",
-              note: "150 mL/day",
-              options: [{ gold: true, name: "Organic cold-pressed OJ" }]
+              qty: "3.6 L/week",
+              note: "250 mL/day each",
+              options: [{ gold: true, name: "Organic cold-pressed OJ, no preservatives, glass" }]
             },
             {
               id: "coconut-water",
               name: "Coconut water",
+              qty: "3.5 L/week",
+              note: "250 mL/day each",
               options: [
                 { gold: true, name: "Raw C Coconut Water" },
                 { name: "Other 100% pure coconut water with nothing added" }
+              ]
+            },
+            {
+              id: "bone-broth",
+              name: "Bone broth paste",
+              qty: "~1 jar every 2 weeks (~17 mugs/week for two)",
+              note: "Morning snack mug each + slow cooker/pho · 1 heaped tsp in 250 mL hot (not boiling) water · refrigerate after opening",
+              options: [
+                { gold: true, name: "Best of the Bone Original bone broth concentrate paste", note: "$32.99 · bestofthebone.com · code HOLISTICGUT15" }
               ]
             }
           ]
@@ -172,56 +229,60 @@ var SHOPPING = {
             {
               id: "evoo",
               name: "Extra virgin olive oil",
-              options: [{ gold: true, name: "Australian EVOO" }]
+              qty: "~150 mL/week",
+              note: "Raw only (dressings)",
+              options: [{ gold: true, name: "Australian EVOO in dark glass or tin" }]
             },
             {
-              id: "sweetener",
-              name: "Sweetener",
+              id: "cooking-fat",
+              name: "Cooking fat",
               options: [
-                { gold: true, name: "Pure maple syrup" },
-                { name: "Raw honey" }
+                { gold: true, name: "Beef tallow (Best of the Bone)", note: "Code HOLISTICGUT15" },
+                { name: "Ghee (grass-fed, glass jar)" }
               ]
+            },
+            {
+              id: "passata",
+              name: "Tomato passata",
+              qty: "300 g/week (+300 g per slow cooker cacciatore or ragu)",
+              options: [{ gold: true, name: "Organic tomato passata in glass" }]
+            },
+            {
+              id: "raw-honey",
+              name: "Raw honey",
+              qty: "~250 g/week",
+              note: "Morning snack: Lockie 1 tbsp, Margo 2 tsp",
+              options: [{ gold: true, name: "Raw Australian organic honey" }]
+            },
+            {
+              id: "maple-syrup",
+              name: "Maple syrup",
+              qty: "~175 g/week",
+              note: "Yoghurt bowl",
+              options: [{ gold: true, name: "Pure maple syrup in glass" }]
             },
             {
               id: "dark-chocolate",
               name: "Dark chocolate (85%)",
-              qty: "1–2 × 80 g bars/week",
-              note: "Max 15 g/day (2 squares) on the yoghurt bowl",
+              qty: "~2 × 80 g bars/week",
+              note: "Max 15 g/day Lockie, 10 g Margo, on the yoghurt bowl",
               options: [
                 { gold: true, name: "Alter Eco Organic Classic Blackout 85% (80 g)", note: "Organic, fair trade · about $8.60–$9.95 · Harris Farm, IGA, health food stores" },
                 { name: "Loving Earth Organic 85% (80 g)", note: "Organic, coconut-nectar sweetened · about $6.90" },
                 { name: "Pana Organic dark (85%)", note: "Organic · Australian-made" }
               ]
             },
-            { id: "ceylon-cinnamon", name: "Ceylon cinnamon", note: "Optional" },
-            { id: "bee-pollen", name: "Bee pollen", note: "Optional" },
             {
-              id: "cooking-fat",
-              name: "Cooking fat",
-              options: [
-                { gold: true, name: "Beef tallow (Best of the Bone)", note: "Code HOLISTICGUT15" },
-                { name: "Ghee" }
-              ]
+              id: "ceylon-cinnamon",
+              name: "Ceylon cinnamon",
+              qty: "~30 g/week",
+              note: "Yoghurt bowl · tested brand",
+              options: [{ gold: true, name: "Ceylon cinnamon (not cassia), tested for lead" }]
             },
             {
               id: "salt",
               name: "Salt",
               options: [{ gold: true, name: "Salt with batch heavy-metal testing" }]
-            },
-            {
-              id: "herbs",
-              name: "Herbs",
-              note: "Garlic, rosemary, thyme · optional"
-            },
-            {
-              id: "ferments",
-              name: "Ferments",
-              note: "Optional",
-              options: [
-                { gold: true, name: "Sauerkraut" },
-                { name: "Kimchi" },
-                { name: "Pickles" }
-              ]
             },
             {
               id: "chewing-gum",
@@ -232,29 +293,13 @@ var SHOPPING = {
               ]
             }
           ]
-        },
-        {
-          id: "optional-rotation",
-          title: "Optional / rotation",
-          items: [
-            {
-              id: "bone-broth",
-              name: "Bone broth",
-              note: "1 heaped tsp per mug",
-              options: [
-                { gold: true, name: "Best of the Bone Original bone broth concentrate paste", note: "$32.99 · bestofthebone.com · code HOLISTICGUT15" }
-              ]
-            },
-            { id: "coffee-tea", name: "Coffee / green tea / yerba mate" },
-            { id: "pom-juice", name: "Pomegranate or tart-cherry juice" }
-          ]
         }
       ]
     },
     {
       id: "supplements",
       label: "Supplements",
-      note: "Only for real gaps.",
+      note: "For two (Lockie + Margo).",
       sections: [
         {
           id: "supplements-list",
@@ -262,28 +307,21 @@ var SHOPPING = {
             {
               id: "omega-3",
               name: "Omega-3",
-              note: "1 tsp each morning with food · keep refrigerated · use within 3 months",
+              qty: "1 × 473 mL bottle ≈ 47 days for two",
+              note: "1 tsp (5 mL) each, morning with Meal 1 · keep refrigerated · use within 3 months · check the lot number on nordic.com · reorder every ~6 weeks",
               options: [
                 { gold: true, name: "Nordic Naturals Arctic Cod Liver Oil, orange, 473 mL", note: "$94.55 · Aus Health Nutrition" },
-                { name: "Nordic Naturals Ultimate Omega, 180 caps (best value)", note: "$129.95 · 2/day with food · Aus Health Nutrition" },
-                { name: "Nordic Naturals Ultimate Omega, 120 caps", note: "$99.95 · 2/day with food · Aus Health Nutrition" },
-                { name: "Nordic Naturals Ultimate Omega, 60 caps", note: "$59.95 · 2/day with food · Aus Health Nutrition" }
+                { name: "Nordic Naturals Ultimate Omega, 180 caps", note: "$129.95 · 2 softgels/day each with food · 45 days for two · Aus Health Nutrition" },
+                { name: "Nordic Naturals Ultimate Omega, 120 caps", note: "$99.95 · 2 softgels/day each with food · 30 days for two · Aus Health Nutrition" }
               ]
             },
             {
               id: "vitamin-d3-k2",
               name: "Vitamin D3 + K2",
-              note: "2 drops/day (not 10)",
+              qty: "3 drops/day combined",
+              note: "Lockie 2 drops, Margo 1, morning with a fat-containing meal · on food or under the tongue · max 4/day (not 10)",
               options: [
                 { gold: true, name: "Seeking Health D3 + K2 Drops, 30 mL", note: "$41.10 · iHerb AU" }
-              ]
-            },
-            {
-              id: "magnesium",
-              name: "Magnesium",
-              note: "Only if food comes up short",
-              options: [
-                { gold: true, name: "Magnesium glycinate (Life Extension or Now Foods)" }
               ]
             }
           ]
