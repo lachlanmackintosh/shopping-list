@@ -35,9 +35,10 @@ var SHOPPING = {
               qty: "460 g/week (~3 kg every 6–7 weeks)",
               note: "Lockie 45 g/day, Margo 20 g/day",
               options: [
-                { gold: true, name: "Protein Supplies Australian Whey, unflavoured, 3 × 1 kg bundle", note: "$157.39 (~$52/kg) · build the bundle with Unflavoured · proteinsuppliesaustralia.com.au" },
-                { name: "Protein Supplies Australian Whey, unflavoured, 1 kg", note: "$69.95 · code CHARLEY10" },
-                { name: "Chief grass-fed whey, unflavoured, 900 g", note: "$119.95 · code HGH10" },
+                { gold: true, name: "Protein Supplies Australia WPC Pure, Unflavoured, 3 × 1 kg bundle", note: "$157.39 sale (normally $209.85) · ~$3.41/day for two · choose Unflavoured · flavour with vanilla extract or cinnamon · proteinsuppliesaustralia.com.au/products/australian-whey-protein-bundle" },
+                { name: "Protein Supplies Australia WPC Pure, Unflavoured, 1 kg", note: "$69.95 · code CHARLEY10 · proteinsuppliesaustralia.com.au/products/australian-whey-powder-wpc-pure" },
+                { name: "Chief Grass-fed Whey, Creamy Vanilla, 900 g", note: "$119.95 · cleanest flavoured (monk fruit, no lecithin) · treat option · wearechief.com" },
+                { name: "Protein Supplies Australia WPC Vanilla, 1 kg", note: "$55.96 sale · contains stevia + sunflower lecithin (conflicts with avoid list)" },
                 { name: "Professional Whey isolate, unflavoured", note: "Code HGH5" }
               ]
             },
@@ -311,9 +312,9 @@ var SHOPPING = {
               qty: "1 × 473 mL bottle ≈ 47 days for two",
               note: "1 tsp (5 mL) each, morning with Meal 1 · keep refrigerated · use within 3 months · check the lot number on nordic.com · reorder every ~6 weeks",
               options: [
-                { gold: true, name: "Nordic Naturals Arctic Cod Liver Oil, orange, 473 mL · Pharmacy Online", note: "$87.95 · pharmacyonline.com.au" },
-                { name: "Nordic Naturals Arctic Cod Liver Oil, orange, 473 mL · Aus Health Nutrition", note: "$94.55 · Aus Health Nutrition" },
-                { name: "Nordic Naturals Ultimate Omega, 180 caps", note: "$129.95 · 2 softgels/day each with food · 45 days for two · Aus Health Nutrition" }
+                { gold: true, name: "Nordic Naturals Arctic Cod Liver Oil, orange, 473 mL · Pharmacy Online", note: "$87.95 · same product as Charley's list · pharmacyonline.com.au/nordic-naturals-arctic-cod-liver-oil-orange-flavour-473ml" },
+                { name: "Nordic Naturals Arctic Cod Liver Oil, orange, 473 mL · Aus Health Nutrition", note: "$94.55 · Charley's link · Aus Health Nutrition" },
+                { name: "Nordic Naturals Ultimate Omega, 180 caps", note: "Capsule backup · $129.95 · 2 softgels/day each with food · 45 days for two · Aus Health Nutrition" }
               ]
             },
             {
@@ -322,8 +323,8 @@ var SHOPPING = {
               qty: "1 kg ≈ 200 days (Lockie, 5 g/day)",
               note: "5 g/day, any time, with water or the yoghurt bowl",
               options: [
-                { gold: true, name: "Just Creatine micronised monohydrate, 1 kg pouch", note: "$33.45 · pure, unflavoured, lab-tested · justcreatine.com.au" },
-                { name: "Protein Supplies Creatine Pure, 500 g", note: "$35.96 · code CHARLEY10" },
+                { gold: true, name: "Just Creatine micronised monohydrate (200 mesh), 1 kg pouch", note: "$33.90 · pure, unflavoured, lab-tested · justcreatine.com.au" },
+                { name: "Protein Supplies Creatine Pure (micronised), 500 g", note: "$35.96 · Charley's list · code CHARLEY10" },
                 { name: "VPA Creatine Monohydrate, 1 kg", note: "$48.00 · NMI tested · vpa.com.au" }
               ]
             },
