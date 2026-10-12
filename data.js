@@ -214,6 +214,27 @@ var SHOPPING = {
               ]
             },
             {
+              id: "pomegranate-juice",
+              name: "Pomegranate juice",
+              qty: "1–2 L/week (as wanted)",
+              note: "200 mL him, 150 mL her · pure, organic, not from concentrate, no added sugar",
+              options: [
+                { gold: true, name: "Nuris Organic Wild Pomegranate Juice 1 L (glass, NFC)", note: "~$7.85 · Coles · coles.com.au" },
+                { name: "Biona Organic Pomegranate Juice 1 L (NFC)", note: "$7.99 · healthnutsaustralia.com.au/products/biona-certified-organic-pomegranate-juice-200ml-or-1l-not-from-concentrate" },
+                { name: "Delizum Bio Organic Pomegranate Juice 1 L (glass)", note: "$11.95 · naturitas.com.au/p/food/drinks/juices/organic-pomegranate-juice-1-l-pomegranate-delizum" }
+              ]
+            },
+            {
+              id: "tart-cherry",
+              name: "Tart cherry concentrate",
+              qty: "1 × 473 mL every ~8 days if daily for two",
+              note: "30 mL each in 250 mL water, evening · organic Montmorency, no added sugar",
+              options: [
+                { gold: true, name: "Dynamic Health Organic Tart Cherry Concentrate 473 mL (glass)", note: "AU$31.24 · iHerb · au.iherb.com/pr/dynamic-health-tart-cherry-concentrate-16-fl-oz-473-ml/130758" },
+                { name: "Dr Superfoods Tart Cherry Concentrate 473 mL (100% Montmorency, not certified organic)", note: "$34.95 · pharmacyonline.com.au/dr-superfoods-tart-cherry-concentrate-473ml" }
+              ]
+            },
+            {
               id: "bone-broth",
               name: "Bone broth paste",
               qty: "~1 jar every 2 weeks (~17 mugs/week for two)",
