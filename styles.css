@@ -189,13 +189,13 @@ h1 {
 .tab {
   grid-column: span 2;
   min-height: 2.6rem;
-  padding: 0.5rem 0.4rem;
+  padding: 0.5rem 0.1rem;
   border: 1.5px solid var(--olive);
   border-radius: 0.75rem;
   background: transparent;
   color: var(--olive-deep);
   font-family: var(--serif);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   white-space: nowrap;
