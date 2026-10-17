@@ -6,6 +6,7 @@
 
   var state = loadState();
   var activeGroup = "food";
+  var person = state.person === "margo" ? "margo" : "lockie";
   var openItemId = null;
   var justTickedId = null;
   var focusSection = null;
@@ -19,6 +20,7 @@
       data.ticks = data.ticks && typeof data.ticks === "object" ? data.ticks : {};
       data.choices = data.choices && typeof data.choices === "object" ? data.choices : {};
       data.custom = data.custom && typeof data.custom === "object" ? data.custom : {};
+      if (data.person !== "margo") data.person = "lockie";
       migrateChoices(data);
       return data;
     } catch (err) {
@@ -27,7 +29,7 @@
   }
 
   function blankState() {
-    return { ticks: {}, choices: {}, custom: {} };
+    return { ticks: {}, choices: {}, custom: {}, person: "lockie" };
   }
 
   function saveState() {
@@ -70,7 +72,7 @@
     }
 
     SHOPPING.groups.forEach(function (group) {
-      group.sections.forEach(function (section) {
+      allSections(group).forEach(function (section) {
         section.items.forEach(function (item) {
           var saved = data.choices[item.id];
           var options = optionsOf(item);
@@ -84,6 +86,16 @@
         });
       });
     });
+  }
+
+  function allSections(group) {
+    if (group.people) return group.people.lockie.concat(group.people.margo);
+    return group.sections || [];
+  }
+
+  function visibleSections(group) {
+    if (group.people) return group.people[person] || [];
+    return group.sections || [];
   }
 
   function customItems(section) {
@@ -106,7 +118,7 @@
 
   function findCatalogItem(id) {
     for (var i = 0; i < SHOPPING.groups.length; i++) {
-      var sections = SHOPPING.groups[i].sections;
+      var sections = allSections(SHOPPING.groups[i]);
       for (var j = 0; j < sections.length; j++) {
         var items = sections[j].items;
         for (var k = 0; k < items.length; k++) {
@@ -127,7 +139,7 @@
 
   function groupItems(group) {
     var all = [];
-    group.sections.forEach(function (section) {
+    visibleSections(group).forEach(function (section) {
       all = all.concat(sectionEntries(section));
     });
     return all;
@@ -178,30 +190,16 @@
     var name = el("span", "name", item.name);
     text.appendChild(name);
     if (item.qty) text.appendChild(el("span", "qty", item.qty));
-    if (item.note) text.appendChild(el("span", "note", item.note));
     button.appendChild(text);
     row.appendChild(button);
 
     var options = optionsOf(item);
-    if (options.length === 1) {
-      var single = el("div", "product");
-      single.appendChild(el("span", "product-name", options[0].name));
-      var singleMeta = noteLine(options[0]);
-      if (singleMeta) single.appendChild(singleMeta);
-      row.appendChild(single);
-    } else if (options.length > 1) {
-      var index = choiceIndex(item);
-      var chosen = options[index];
-      var choice = el("div", "product has-options");
-      choice.appendChild(el("span", "product-name", chosen.name));
-      var meta = noteLine(chosen);
-      if (meta) choice.appendChild(meta);
-      var more = el("button", "optbtn", "Other options");
+    if (options.length) {
+      var more = el("button", "optbtn", options.length > 1 ? "Other options" : "Details");
       more.type = "button";
       more.setAttribute("data-choose", item.id);
-      more.setAttribute("aria-label", "Other options for " + item.name + ". Current option: " + chosen.name);
-      choice.appendChild(more);
-      row.appendChild(choice);
+      more.setAttribute("aria-label", (options.length > 1 ? "Other options for " : "Details for ") + item.name);
+      row.appendChild(more);
     }
 
     if (item.custom) {
@@ -273,7 +271,10 @@
 
   function updateChrome() {
     var group = groupById(activeGroup);
-    var count = tally(groupItems(group));
+    var isRules = group.rules === true;
+    document.getElementById("bar-wrap").hidden = isRules;
+    document.getElementById("count").hidden = isRules;
+    var count = isRules ? { done: 0, total: 0 } : tally(groupItems(group));
     var countEl = document.getElementById("count");
     var label = count.total > 0 && count.done === count.total ? "All ticked" : count.done + " of " + count.total;
     countEl.textContent = label;
@@ -298,8 +299,15 @@
     var group = groupById(activeGroup);
     var list = document.getElementById("list");
     var frag = document.createDocumentFragment();
+    if (group.rules) {
+      frag.appendChild(renderRules());
+      list.replaceChildren(frag);
+      updateChrome();
+      return;
+    }
     if (group.note) frag.appendChild(el("p", "group-note", group.note));
-    group.sections.forEach(function (section) {
+    if (group.people) frag.appendChild(renderPeople());
+    visibleSections(group).forEach(function (section) {
       frag.appendChild(renderSection(section));
     });
     var clear = el("button", "clear", "Clear ticks");
@@ -313,6 +321,36 @@
       if (input) input.focus();
       focusSection = null;
     }
+  }
+
+  function renderPeople() {
+    var bar = el("div", "people");
+    bar.setAttribute("role", "tablist");
+    bar.setAttribute("aria-label", "Whose list");
+    [["lockie", "Lockie"], ["margo", "Margo"]].forEach(function (p) {
+      var b = el("button", "person" + (person === p[0] ? " is-on" : ""), p[1]);
+      b.type = "button";
+      b.setAttribute("data-person", p[0]);
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-selected", person === p[0] ? "true" : "false");
+      bar.appendChild(b);
+    });
+    return bar;
+  }
+
+  function renderRules() {
+    var wrap = el("div", "rules");
+    wrap.appendChild(el("p", "group-note", "The ethos, the rules and how to prep. Tap a heading to open it."));
+    (typeof RULES !== "undefined" ? RULES : []).forEach(function (rule) {
+      var d = el("details", "rule");
+      if (rule.open) d.open = true;
+      d.appendChild(el("summary", null, rule.title));
+      var ul = el("ul");
+      rule.items.forEach(function (t) { ul.appendChild(el("li", null, t)); });
+      d.appendChild(ul);
+      wrap.appendChild(d);
+    });
+    return wrap;
   }
 
   function toggleTick(id) {
@@ -354,7 +392,7 @@
     var item = findCatalogItem(id);
     if (!item) return;
     var options = optionsOf(item);
-    if (options.length < 2) return;
+    if (!options.length) return;
     openItemId = id;
     document.getElementById("sheet-title").textContent = item.name;
     var qty = document.getElementById("sheet-qty");
@@ -365,6 +403,10 @@
       qty.hidden = true;
       qty.textContent = "";
     }
+    var infoEl = document.getElementById("sheet-info");
+    infoEl.hidden = !item.info;
+    infoEl.textContent = item.info || "";
+    document.getElementById("sheet-kicker").textContent = options.length > 1 ? "Choose one" : "What to buy";
     var host = document.getElementById("sheet-options");
     host.replaceChildren();
     var current = choiceIndex(item);
@@ -377,7 +419,7 @@
       radio.setAttribute("aria-hidden", "true");
       var copy = el("span");
       var kicker = el("span", "opt-kicker");
-      kicker.appendChild(document.createTextNode("Option " + (index + 1)));
+      kicker.appendChild(document.createTextNode(index === 0 ? "The pick" : "Also fine"));
       if (opt.gold) {
         kicker.appendChild(document.createTextNode(" · "));
         kicker.appendChild(el("span", "gold", "Gold standard"));
@@ -433,6 +475,14 @@
         openSheet(choose.getAttribute("data-choose"));
         return;
       }
+      var who = event.target.closest("[data-person]");
+      if (who) {
+        person = who.getAttribute("data-person");
+        state.person = person;
+        saveState();
+        render();
+        return;
+      }
       var tick = event.target.closest("[data-tick]");
       if (tick) {
         toggleTick(tick.getAttribute("data-tick"));
@@ -484,7 +534,7 @@
     SHOPPING.groups.forEach(function (group) {
       if (seen[group.id]) console.error("Duplicate id: " + group.id);
       seen[group.id] = true;
-      group.sections.forEach(function (section) {
+      allSections(group).forEach(function (section) {
         if (seen[section.id]) console.error("Duplicate id: " + section.id);
         seen[section.id] = true;
         section.items.forEach(function (item) {
