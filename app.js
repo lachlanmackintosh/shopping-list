@@ -4,6 +4,11 @@
   var STORAGE_KEY = "lockie-shopping-v1";
   var SVG_NS = "http://www.w3.org/2000/svg";
 
+  var EDITS_KEY = "lockie-shopping-edits-v1";
+  var edits = loadEdits();
+  var editing = false;
+  var formCtx = null;
+  var undoTimer = null;
   var state = loadState();
   var activeGroup = "food";
   var person = state.person === "margo" ? "margo" : "lockie";
@@ -26,6 +31,28 @@
     } catch (err) {
       return blankState();
     }
+  }
+
+  function loadEdits() {
+    var e = { added: {}, hidden: {}, over: {}, rules: [] };
+    try {
+      var d = JSON.parse(localStorage.getItem(EDITS_KEY) || "null");
+      if (d && typeof d === "object") {
+        if (d.added && typeof d.added === "object") e.added = d.added;
+        if (d.hidden && typeof d.hidden === "object") e.hidden = d.hidden;
+        if (d.over && typeof d.over === "object") e.over = d.over;
+        if (Array.isArray(d.rules)) e.rules = d.rules;
+      }
+    } catch (err) {}
+    return e;
+  }
+
+  function saveEdits() {
+    localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
+  }
+
+  function uid() {
+    return "c-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   }
 
   function blankState() {
@@ -99,14 +126,26 @@
   }
 
   function customItems(section) {
-    var list = state.custom[section.id] || [];
-    return list.map(function (item) {
-      return { id: item.id, name: item.name, custom: true, sectionId: section.id };
+    var legacy = (state.custom[section.id] || []).map(function (item) {
+      return { id: item.id, name: item.name, qty: item.note || "", custom: true, sectionId: section.id };
+    });
+    var added = (edits.added[section.id] || []).map(function (item) {
+      return { id: item.id, name: item.name, qty: item.note || "", custom: true, sectionId: section.id };
+    });
+    return legacy.concat(added).filter(function (item) {
+      return !edits.hidden[item.id];
+    }).map(function (item) {
+      var o = edits.over[item.id];
+      if (o) { item.name = o.title; item.qty = o.note || ""; }
+      return item;
     });
   }
 
   function sectionEntries(section) {
-    return section.items.concat(customItems(section));
+    var builtin = section.items.filter(function (item) {
+      return !edits.hidden[item.id];
+    });
+    return builtin.concat(customItems(section));
   }
 
   function groupById(id) {
@@ -189,10 +228,14 @@
     var text = el("span", "text");
     var isClean = /^(cleaning|care)/.test(section.id) && !item.custom && optionsOf(item).length;
     var mainName = isClean ? optionsOf(item)[choiceIndex(item)].name : item.name;
+    var sub = isClean ? item.name : item.qty;
+    var ov = edits.over[item.id];
+    if (ov && !item.custom) { mainName = ov.title; sub = ov.note || ""; }
     var name = el("span", "name", mainName);
     text.appendChild(name);
-    if (isClean) text.appendChild(el("span", "qty", item.name));
-    else if (item.qty) text.appendChild(el("span", "qty", item.qty));
+    if (sub) text.appendChild(el("span", "qty", sub));
+    item.shownTitle = mainName;
+    item.shownNote = sub || "";
     button.appendChild(text);
     row.appendChild(button);
 
@@ -205,16 +248,40 @@
       row.appendChild(more);
     }
 
-    if (item.custom) {
-      var remove = el("button", "remove", "remove");
-      remove.type = "button";
-      remove.setAttribute("data-remove", item.id);
-      remove.setAttribute("data-section", section.id);
-      remove.setAttribute("aria-label", "Remove " + item.name);
-      row.appendChild(remove);
+    if (editing) {
+      var acts = el("div", "edit-actions");
+      var eb = el("button", "mini", "Edit");
+      eb.type = "button";
+      eb.setAttribute("data-edit-item", item.id);
+      eb.setAttribute("data-section", section.id);
+      eb.setAttribute("aria-label", "Edit " + item.shownTitle);
+      var xb = el("button", "mini mini-x", "\u2715 Remove");
+      xb.type = "button";
+      xb.setAttribute("data-hide", item.id);
+      xb.setAttribute("aria-label", "Remove " + item.shownTitle);
+      acts.appendChild(eb);
+      acts.appendChild(xb);
+      row.appendChild(acts);
     }
 
     return row;
+  }
+
+  function addButton(sectionId, label) {
+    var b = el("button", "addbtn", "+ " + (label || "Add"));
+    b.type = "button";
+    b.setAttribute("data-add", sectionId);
+    return b;
+  }
+
+  function toolbar() {
+    var bar = el("div", "toolbar");
+    var b = el("button", "editbtn" + (editing ? " is-on" : ""), editing ? "Done" : "Edit");
+    b.type = "button";
+    b.id = "edit-toggle";
+    b.setAttribute("aria-pressed", editing ? "true" : "false");
+    bar.appendChild(b);
+    return bar;
   }
 
   function renderSection(section) {
@@ -236,21 +303,7 @@
       wrap.appendChild(renderItem(item, section));
     });
 
-    var form = el("form", "add");
-    form.setAttribute("data-add-form", section.id);
-    var input = el("input");
-    input.type = "text";
-    input.maxLength = 80;
-    input.placeholder = "Add a one-off";
-    input.setAttribute("aria-label", "One-off item for " + (section.title || "this list"));
-    input.autocomplete = "off";
-    input.enterKeyHint = "done";
-    var add = el("button", null, "Add");
-    add.type = "submit";
-    add.setAttribute("aria-label", "Add a one-off to " + (section.title || "this list"));
-    form.appendChild(input);
-    form.appendChild(add);
-    wrap.appendChild(form);
+    if (activeGroup === "food") wrap.appendChild(addButton(section.id));
     return wrap;
   }
 
@@ -265,6 +318,7 @@
       btn.addEventListener("click", function () {
         if (activeGroup === group.id) return;
         activeGroup = group.id;
+        editing = false;
         window.scrollTo(0, 0);
         render();
       });
@@ -302,6 +356,7 @@
     var group = groupById(activeGroup);
     var list = document.getElementById("list");
     var frag = document.createDocumentFragment();
+    frag.appendChild(toolbar());
     if (group.rules) {
       frag.appendChild(renderRules());
       list.replaceChildren(frag);
@@ -313,17 +368,16 @@
     visibleSections(group).forEach(function (section) {
       frag.appendChild(renderSection(section));
     });
+    if (activeGroup !== "food") {
+      var secs = visibleSections(group);
+      if (secs.length) frag.appendChild(addButton(secs[0].id));
+    }
     var clear = el("button", "clear", "Clear ticks");
     clear.type = "button";
     clear.id = "clear-ticks";
     frag.appendChild(clear);
     list.replaceChildren(frag);
     updateChrome();
-    if (focusSection) {
-      var input = list.querySelector('[data-add-form="' + focusSection + '"] input');
-      if (input) input.focus();
-      focusSection = null;
-    }
   }
 
   function renderPeople() {
@@ -341,18 +395,53 @@
     return bar;
   }
 
+  function slug(t) {
+    return String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  function ruleList() {
+    var out = [];
+    (typeof RULES !== "undefined" ? RULES : []).forEach(function (r) {
+      var id = "rule-" + slug(r.title);
+      out.push({ id: id, title: r.title, items: r.items, open: r.open, custom: false });
+    });
+    edits.rules.forEach(function (r) {
+      out.push({ id: r.id, title: r.title, items: String(r.body || "").split(/\n+/).filter(Boolean), custom: true });
+    });
+    return out.filter(function (r) { return !edits.hidden[r.id]; }).map(function (r) {
+      var o = edits.over[r.id];
+      if (o) { r.title = o.title; r.items = String(o.note || "").split(/\n+/).filter(Boolean); }
+      return r;
+    });
+  }
+
   function renderRules() {
     var wrap = el("div", "rules");
     wrap.appendChild(el("p", "group-note", "The ethos, the rules and how to prep. Tap a heading to open it."));
-    (typeof RULES !== "undefined" ? RULES : []).forEach(function (rule) {
+    ruleList().forEach(function (rule) {
+      var box = el("div", "rule-wrap");
       var d = el("details", "rule");
       if (rule.open) d.open = true;
       d.appendChild(el("summary", null, rule.title));
       var ul = el("ul");
       rule.items.forEach(function (t) { ul.appendChild(el("li", null, t)); });
       d.appendChild(ul);
-      wrap.appendChild(d);
+      box.appendChild(d);
+      if (editing) {
+        var acts = el("div", "edit-actions rule-actions");
+        var eb = el("button", "mini", "Edit");
+        eb.type = "button";
+        eb.setAttribute("data-edit-rule", rule.id);
+        var xb = el("button", "mini mini-x", "\u2715 Remove");
+        xb.type = "button";
+        xb.setAttribute("data-hide", rule.id);
+        acts.appendChild(eb);
+        acts.appendChild(xb);
+        box.appendChild(acts);
+      }
+      wrap.appendChild(box);
     });
+    wrap.appendChild(addButton("rules", "Add rule"));
     return wrap;
   }
 
@@ -369,25 +458,109 @@
     justTickedId = null;
   }
 
-  function removeCustom(sectionId, id) {
-    var list = state.custom[sectionId] || [];
-    state.custom[sectionId] = list.filter(function (item) { return item.id !== id; });
-    if (!state.custom[sectionId].length) delete state.custom[sectionId];
-    delete state.ticks[id];
-    saveState();
-    render();
+  function findEntry(id) {
+    var found = null;
+    SHOPPING.groups.forEach(function (g) {
+      allSections(g).forEach(function (sec) {
+        sectionEntries(sec).concat(sec.items).forEach(function (it) {
+          if (it.id === id && !found) found = it;
+        });
+      });
+    });
+    return found;
   }
 
-  function addCustom(sectionId, name) {
-    var trimmed = name.trim().slice(0, 80);
-    if (!trimmed) return;
-    if (!state.custom[sectionId]) state.custom[sectionId] = [];
-    state.custom[sectionId].push({
-      id: "c-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-      name: trimmed
-    });
-    saveState();
-    focusSection = sectionId;
+  function hideId(id) {
+    edits.hidden[id] = true;
+    saveEdits();
+    render();
+    showUndo(id);
+  }
+
+  function showUndo(id) {
+    var t = document.getElementById("undo");
+    if (!t) {
+      t = el("div", "undo");
+      t.id = "undo";
+      var msg = el("span", null, "Removed.");
+      var btn = el("button", null, "Undo");
+      btn.type = "button";
+      btn.id = "undo-btn";
+      t.appendChild(msg);
+      t.appendChild(btn);
+      document.body.appendChild(t);
+      btn.addEventListener("click", function () {
+        var uid2 = t.getAttribute("data-id");
+        if (uid2) { delete edits.hidden[uid2]; saveEdits(); render(); }
+        t.hidden = true;
+      });
+    }
+    t.setAttribute("data-id", id);
+    t.hidden = false;
+    clearTimeout(undoTimer);
+    undoTimer = setTimeout(function () { t.hidden = true; }, 6000);
+  }
+
+  function openForm(ctx) {
+    formCtx = ctx;
+    var isRule = ctx.kind === "rule";
+    var host = document.getElementById("form-overlay");
+    if (!host) {
+      host = el("div", "overlay center");
+      host.id = "form-overlay";
+      var dlg = el("form", "dialog");
+      dlg.id = "item-form";
+      dlg.setAttribute("role", "dialog");
+      dlg.setAttribute("aria-modal", "true");
+      dlg.innerHTML = '<h2 id="form-title"></h2>' +
+        '<label class="field"><span id="lbl-title">Title</span><input id="f-title" type="text" maxlength="140" autocomplete="off"></label>' +
+        '<label class="field"><span id="lbl-note">Note (optional)</span><input id="f-note" type="text" maxlength="160" autocomplete="off"><textarea id="f-body" rows="6" maxlength="1500"></textarea></label>' +
+        '<div class="dialog-actions"><button type="button" class="btn btn-quiet" id="form-cancel">Cancel</button><button type="submit" class="btn btn-ink" id="form-save">Save</button></div>';
+      host.appendChild(dlg);
+      document.body.appendChild(host);
+      dlg.addEventListener("submit", function (e) { e.preventDefault(); saveForm(); });
+      document.getElementById("form-cancel").addEventListener("click", closeForm);
+      host.addEventListener("click", function (e) { if (e.target === host) closeForm(); });
+    }
+    document.getElementById("form-title").textContent = (ctx.id ? "Edit " : "Add ") + (isRule ? "rule" : "item");
+    document.getElementById("lbl-note").firstChild && (document.getElementById("lbl-note").textContent = isRule ? "Text (one point per line)" : "Note (optional)");
+    document.getElementById("f-title").value = ctx.title || "";
+    document.getElementById("f-note").value = ctx.note || "";
+    document.getElementById("f-body").value = ctx.note || "";
+    document.getElementById("f-note").hidden = isRule;
+    document.getElementById("f-body").hidden = !isRule;
+    host.hidden = false;
+    document.getElementById("f-title").focus();
+  }
+
+  function closeForm() {
+    var host = document.getElementById("form-overlay");
+    if (host) host.hidden = true;
+    formCtx = null;
+  }
+
+  function saveForm() {
+    if (!formCtx) return;
+    var title = document.getElementById("f-title").value.trim();
+    if (!title) { document.getElementById("f-title").focus(); return; }
+    var isRule = formCtx.kind === "rule";
+    var note = (isRule ? document.getElementById("f-body").value : document.getElementById("f-note").value).trim();
+    var id = formCtx.id;
+    if (id) {
+      var isAdded = false;
+      var lists = isRule ? edits.rules : [].concat.apply([], Object.keys(edits.added).map(function (k) { return edits.added[k]; }));
+      lists.forEach(function (it) { if (it.id === id) { isAdded = true; if (isRule) { it.title = title; it.body = note; } else { it.name = title; it.note = note; } } });
+      if (!isAdded) edits.over[id] = { title: title, note: note };
+      else delete edits.over[id];
+    } else if (isRule) {
+      edits.rules.push({ id: uid(), title: title, body: note });
+    } else {
+      var sid = formCtx.section;
+      if (!edits.added[sid]) edits.added[sid] = [];
+      edits.added[sid].push({ id: uid(), name: title, note: note });
+    }
+    saveEdits();
+    closeForm();
     render();
   }
 
@@ -478,9 +651,33 @@
         openSheet(choose.getAttribute("data-choose"));
         return;
       }
+      var tg = event.target.closest("#edit-toggle");
+      if (tg) { editing = !editing; render(); return; }
+      var ad = event.target.closest("[data-add]");
+      if (ad) {
+        var sid = ad.getAttribute("data-add");
+        openForm(sid === "rules" ? { kind: "rule" } : { kind: "item", section: sid });
+        return;
+      }
+      var hd = event.target.closest("[data-hide]");
+      if (hd) { hideId(hd.getAttribute("data-hide")); return; }
+      var ei = event.target.closest("[data-edit-item]");
+      if (ei) {
+        var ent = findEntry(ei.getAttribute("data-edit-item"));
+        if (ent) { var shown = ent.custom ? { t: ent.name, n: ent.qty } : { t: ent.shownTitle || ent.name, n: ent.shownNote || "" }; openForm({ kind: "item", id: ent.id, title: shown.t, note: shown.n }); }
+        return;
+      }
+      var er = event.target.closest("[data-edit-rule]");
+      if (er) {
+        var rid = er.getAttribute("data-edit-rule");
+        var r = ruleList().filter(function (x) { return x.id === rid; })[0];
+        if (r) openForm({ kind: "rule", id: rid, title: r.title, note: r.items.join("\n") });
+        return;
+      }
       var who = event.target.closest("[data-person]");
       if (who) {
         person = who.getAttribute("data-person");
+        editing = false;
         state.person = person;
         saveState();
         render();
@@ -494,13 +691,6 @@
       if (event.target.closest("#clear-ticks")) openConfirm();
     });
 
-    list.addEventListener("submit", function (event) {
-      var form = event.target.closest("[data-add-form]");
-      if (!form) return;
-      event.preventDefault();
-      var input = form.querySelector("input");
-      addCustom(form.getAttribute("data-add-form"), input.value);
-    });
 
     document.getElementById("sheet").addEventListener("click", function (event) {
       if (event.target.id === "sheet") closeSheet();
@@ -527,7 +717,8 @@
 
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") return;
-      if (!document.getElementById("confirm").hidden) closeConfirm();
+      if (document.getElementById("form-overlay") && !document.getElementById("form-overlay").hidden) closeForm();
+      else if (!document.getElementById("confirm").hidden) closeConfirm();
       else if (!document.getElementById("sheet").hidden) closeSheet();
     });
   }
