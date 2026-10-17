@@ -634,6 +634,7 @@ main::before {
 }
 
 .sheet-qty,
+.sheet-info,
 .dialog p {
   margin: 0.4rem 0 0;
   font-family: var(--serif);
@@ -794,3 +795,18 @@ body.locked {
 .item.is-ticked .optbtn {
   opacity: 0.62;
 }
+
+/* People toggle + rules */
+.people { display: flex; gap: 6px; margin: 4px 0 14px; padding: 4px; background: rgba(0,0,0,.05); border-radius: 999px; }
+.person { flex: 1; border: 0; background: transparent; font: inherit; font-weight: 600; padding: 9px 12px; border-radius: 999px; color: inherit; cursor: pointer; }
+.person.is-on { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+.sheet-info { margin: 6px 0 12px; font-size: .95rem; opacity: .8; line-height: 1.4; }
+.rules { display: flex; flex-direction: column; gap: 8px; padding-bottom: 40px; }
+.rule { background: rgba(255,255,255,.7); border: 1px solid rgba(0,0,0,.1); border-radius: 14px; padding: 0 14px; }
+.rule summary { cursor: pointer; font-weight: 600; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; }
+.rule summary::-webkit-details-marker { display: none; }
+.rule summary::after { content: "+"; font-size: 1.3rem; line-height: 1; }
+.rule[open] summary::after { content: "\2212"; }
+.rule ul { margin: 0 0 14px; padding-left: 18px; line-height: 1.45; }
+.rule li { margin-bottom: 6px; }
+.item > .optbtn { margin: 0.1rem 0 0.8rem 2.75rem; }
