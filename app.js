@@ -187,7 +187,7 @@
     button.appendChild(box);
 
     var text = el("span", "text");
-    var isClean = /^cleaning/.test(section.id) && !item.custom && optionsOf(item).length;
+    var isClean = /^(cleaning|care)/.test(section.id) && !item.custom && optionsOf(item).length;
     var mainName = isClean ? optionsOf(item)[choiceIndex(item)].name : item.name;
     var name = el("span", "name", mainName);
     text.appendChild(name);

@@ -1,6 +1,6 @@
 /* Offline cache for the shopping list.
    When you add a file (a font, an icon), list it in ASSETS and bump CACHE. */
-var CACHE = "shopping-v17";
+var CACHE = "shopping-v18";
 var ASSETS = [
   "./",
   "./index.html",
