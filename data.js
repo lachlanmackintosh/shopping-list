@@ -1057,7 +1057,7 @@ var SHOPPING = {
           {
             "id": "care-m-optional",
             "title": "Margo to add",
-            "note": "Margo to add her own face, hair and deodorant picks. Use \"Add a one-off\" below.",
+            "note": "Margo to add her own face, hair and deodorant picks. Tap + Add below.",
             "items": []
           }
         ]

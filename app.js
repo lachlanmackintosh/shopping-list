@@ -47,6 +47,10 @@
     return e;
   }
 
+  function arr(v) { return Array.isArray(v) ? v.filter(function (x) { return x && typeof x === "object" && x.id && x.name; }) : []; }
+
+  function isHidden(id) { return edits.hidden[id] === true; }
+
   function saveEdits() {
     localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
   }
@@ -126,14 +130,14 @@
   }
 
   function customItems(section) {
-    var legacy = (state.custom[section.id] || []).map(function (item) {
+    var legacy = arr(state.custom[section.id]).map(function (item) {
       return { id: item.id, name: item.name, qty: item.note || "", custom: true, sectionId: section.id };
     });
-    var added = (edits.added[section.id] || []).map(function (item) {
+    var added = arr(edits.added[section.id]).map(function (item) {
       return { id: item.id, name: item.name, qty: item.note || "", custom: true, sectionId: section.id };
     });
     return legacy.concat(added).filter(function (item) {
-      return !edits.hidden[item.id];
+      return !isHidden(item.id);
     }).map(function (item) {
       var o = edits.over[item.id];
       if (o) { item.name = o.title; item.qty = o.note || ""; }
@@ -143,7 +147,7 @@
 
   function sectionEntries(section) {
     var builtin = section.items.filter(function (item) {
-      return !edits.hidden[item.id];
+      return !isHidden(item.id);
     });
     return builtin.concat(customItems(section));
   }
@@ -276,7 +280,8 @@
 
   function toolbar() {
     var bar = el("div", "toolbar");
-    var b = el("button", "editbtn" + (editing ? " is-on" : ""), editing ? "Done" : "Edit");
+    bar.appendChild(el("span", "toolbar-hint", editing ? "Tap Edit or Remove on any item" : "Add or remove items"));
+    var b = el("button", "editbtn" + (editing ? " is-on" : ""), editing ? "\u2713 Done" : "\u270E Edit list");
     b.type = "button";
     b.id = "edit-toggle";
     b.setAttribute("aria-pressed", editing ? "true" : "false");
@@ -408,7 +413,7 @@
     edits.rules.forEach(function (r) {
       out.push({ id: r.id, title: r.title, items: String(r.body || "").split(/\n+/).filter(Boolean), custom: true });
     });
-    return out.filter(function (r) { return !edits.hidden[r.id]; }).map(function (r) {
+    return out.filter(function (r) { return !isHidden(r.id); }).map(function (r) {
       var o = edits.over[r.id];
       if (o) { r.title = o.title; r.items = String(o.note || "").split(/\n+/).filter(Boolean); }
       return r;

@@ -1,6 +1,6 @@
 /* Offline cache for the shopping list.
    When you add a file (a font, an icon), list it in ASSETS and bump CACHE. */
-var CACHE = "shopping-v19";
+var CACHE = "shopping-v20";
 var ASSETS = [
   "./",
   "./index.html",
@@ -50,7 +50,7 @@ self.addEventListener("fetch", function (event) {
   if (url.origin !== self.location.origin) return;
 
   event.respondWith(
-    fetch(request).then(function (response) {
+    fetch(request, { cache: "reload" }).then(function (response) {
       if (response && response.ok) {
         var copy = response.clone();
         caches.open(CACHE).then(function (cache) {

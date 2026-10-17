@@ -812,7 +812,7 @@ body.locked {
 .item > .optbtn { margin: 0.1rem 0 0.8rem 2.75rem; }
 
 /* List management */
-.toolbar { display: flex; justify-content: flex-end; margin: 0 0 0.2rem; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: .6rem; margin: 0 0 0.2rem; }
 .editbtn { min-height: 2.25rem; padding: 0.2rem 0.9rem; border: 1px solid rgba(82,98,66,.45); border-radius: 999px; background: none; color: var(--olive); font-family: var(--serif); font-style: italic; font-size: 0.92rem; cursor: pointer; }
 .editbtn.is-on { background: var(--olive); color: #f7f2e8; border-color: var(--olive); font-style: normal; font-weight: 600; }
 .addbtn { display: block; margin: 0.3rem 0 0.4rem 2.75rem; min-height: 2.75rem; padding: 0 0.2rem; border: none; background: none; color: var(--olive); font-weight: 600; font-size: 1rem; cursor: pointer; }
@@ -829,3 +829,6 @@ body.locked {
 .undo { position: fixed; left: 50%; bottom: 1.2rem; transform: translateX(-50%); z-index: 50; display: flex; align-items: center; gap: 1rem; padding: 0.6rem 1rem; border-radius: 999px; background: #3b3a30; color: #f7f2e8; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
 .undo[hidden] { display: none; }
 .undo button { border: none; background: none; color: #e9d9a6; font-weight: 700; font-size: 1rem; min-height: 2rem; }
+
+.toolbar-hint { font-size: .85rem; color: var(--olive); opacity: .8; }
+.editbtn { min-height: 2.5rem; padding: .3rem 1.1rem; border-width: 1.5px; font-weight: 600; background: rgba(82,98,66,.1); }
