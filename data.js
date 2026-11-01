@@ -1025,7 +1025,7 @@ var SHOPPING = {
               },
               {
                 "id": "care-deodorant",
-                "name": "Deodorant",
+                "name": "Deodorant: natural aluminium-free, to be confirmed",
                 "options": [
                   {
                     "gold": true,
