@@ -628,6 +628,83 @@ var SHOPPING = {
               ]
             }
           ]
+        },
+        {
+          "id": "simmer-pot",
+          "title": "Simmer pot",
+          "items": [
+            {
+              "id": "simmer-orange",
+              "name": "1 orange",
+              "qty": "1/week",
+              "options": [
+                {
+                  "gold": true,
+                  "name": "Organic orange"
+                },
+                {
+                  "name": "Lemon"
+                },
+                {
+                  "name": "Lime"
+                }
+              ],
+              "info": "Slice and simmer on the stove in a pot of water. Low-tox way to scent the house. Other options: lemon or lime."
+            },
+            {
+              "id": "simmer-cinnamon",
+              "name": "Cinnamon sticks",
+              "options": [
+                {
+                  "gold": true,
+                  "name": "Organic cinnamon sticks"
+                }
+              ],
+              "info": "For the simmer pot. A pack lasts weeks."
+            },
+            {
+              "id": "simmer-cloves",
+              "name": "Whole cloves",
+              "options": [
+                {
+                  "gold": true,
+                  "name": "Organic whole cloves"
+                }
+              ],
+              "info": "For the simmer pot. A small jar lasts months."
+            },
+            {
+              "id": "simmer-vanilla",
+              "name": "Vanilla extract (pure)",
+              "options": [
+                {
+                  "gold": true,
+                  "name": "Pure vanilla extract, no additives"
+                }
+              ],
+              "info": "A splash in the simmer pot. Pure only: no sugar, glycerin or artificial flavour."
+            },
+            {
+              "id": "simmer-rotation",
+              "name": "Optional: rosemary, mint, ginger or star anise",
+              "options": [
+                {
+                  "gold": true,
+                  "name": "Fresh rosemary"
+                },
+                {
+                  "name": "Fresh mint"
+                },
+                {
+                  "name": "Fresh ginger"
+                },
+                {
+                  "name": "Star anise"
+                }
+              ],
+              "info": "Pick one to rotate scents. Other options: mint, ginger or star anise."
+            }
+          ]
         }
       ]
     },
