@@ -189,6 +189,7 @@ var SHOPPING = {
             },
             {
               "id": "potato",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "White potato",
               "qty": "1.4 kg/week",
               "options": [
@@ -244,6 +245,8 @@ var SHOPPING = {
           "items": [
             {
               "id": "blackberries",
+              "inSeason": [12, 1, 2, 3],
+              "frozenOk": true,
               "name": "Organic blackberries",
               "qty": "910 g/week",
               "options": [
@@ -256,6 +259,7 @@ var SHOPPING = {
             },
             {
               "id": "blueberries",
+              "inSeason": [7, 8, 9, 10, 11, 12],
               "name": "Organic blueberries",
               "qty": "630 g/week",
               "options": [
@@ -268,11 +272,14 @@ var SHOPPING = {
             },
             {
               "id": "strawberries",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Organic strawberries",
               "qty": "560 g/week"
             },
             {
               "id": "raspberries",
+              "inSeason": [12, 1, 2, 3],
+              "frozenOk": true,
               "name": "Organic raspberries",
               "qty": "560 g/week",
               "options": [
@@ -285,6 +292,7 @@ var SHOPPING = {
             },
             {
               "id": "bananas",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Bananas",
               "qty": "~13/week",
               "options": [
@@ -297,16 +305,19 @@ var SHOPPING = {
             },
             {
               "id": "gold-kiwifruit",
+              "inSeason": [4, 5, 6, 7, 8, 9, 10],
               "name": "Gold kiwifruit",
               "qty": "~7/week"
             },
             {
               "id": "avocados",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Avocados",
               "qty": "~12/week"
             },
             {
               "id": "broccoli",
+              "inSeason": [5, 6, 7, 8, 9, 10],
               "name": "Broccoli",
               "qty": "~5 heads/week",
               "options": [
@@ -319,11 +330,13 @@ var SHOPPING = {
             },
             {
               "id": "cos",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Cos lettuce",
               "qty": "~3 heads/week"
             },
             {
               "id": "cucumber",
+              "inSeason": [10, 11, 12, 1, 2, 3, 4],
               "name": "Cucumber",
               "qty": "~7 Lebanese/week",
               "options": [
@@ -336,11 +349,13 @@ var SHOPPING = {
             },
             {
               "id": "tomato",
+              "inSeason": [10, 11, 12, 1, 2, 3, 4],
               "name": "Organic tomatoes",
               "qty": "~11/week"
             },
             {
               "id": "capsicum",
+              "inSeason": [10, 11, 12, 1, 2, 3, 4],
               "name": "Organic red capsicum",
               "qty": "~5/week",
               "options": [
@@ -353,6 +368,7 @@ var SHOPPING = {
             },
             {
               "id": "red-onion",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Red onion",
               "qty": "~3/week",
               "options": [
@@ -365,6 +381,7 @@ var SHOPPING = {
             },
             {
               "id": "carrots",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Carrots",
               "qty": "~2/week",
               "options": [
@@ -377,6 +394,7 @@ var SHOPPING = {
             },
             {
               "id": "garlic",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Garlic",
               "qty": "1 bulb"
             },
@@ -404,6 +422,7 @@ var SHOPPING = {
             },
             {
               "id": "lemons",
+              "inSeason": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
               "name": "Lemons",
               "qty": "~3/week"
             },

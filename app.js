@@ -238,6 +238,11 @@
     var name = el("span", "name", mainName);
     text.appendChild(name);
     if (sub) text.appendChild(el("span", "qty", sub));
+    if (Array.isArray(item.inSeason)) {
+      var inS = item.inSeason.indexOf(new Date().getMonth() + 1) !== -1;
+      var tag = inS ? "In season" : (item.frozenOk ? "Frozen, any month" : "Not in season");
+      text.appendChild(el("span", "season " + (inS ? "in" : (item.frozenOk ? "frozen" : "out")), (inS ? "\u2713 " : "\u2715 ") + tag));
+    }
     item.shownTitle = mainName;
     item.shownNote = sub || "";
     button.appendChild(text);
