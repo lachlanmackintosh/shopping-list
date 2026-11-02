@@ -1093,6 +1093,26 @@ var SHOPPING = {
                     "name": "The Ordinary squalane"
                   }
                 ]
+              },
+              {
+                "id": "care-opt-sylvawell-fragrance",
+                "name": "Natural fragrance (later)",
+                "options": [
+                  {
+                    "gold": true,
+                    "name": "Sylvawell Discovery Set ($59), test Sanctum or Sylva first"
+                  }
+                ]
+              },
+              {
+                "id": "care-opt-lactic-acid",
+                "name": "Lactic acid (keratosis pilaris)",
+                "options": [
+                  {
+                    "gold": true,
+                    "name": "The Ordinary Lactic Acid 5% + HA"
+                  }
+                ]
               }
             ]
           }
