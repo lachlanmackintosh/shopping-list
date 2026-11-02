@@ -921,10 +921,11 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "The Ordinary Squalane Cleanser"
+                    "name": "MooGoo creamy cleanser (blue bottle, daily)"
                   },
                   {
-                    "name": "MooGoo cleanser (variant TBC)"
+                    "gold": true,
+                    "name": "The Ordinary Squalane Cleanser (heavy-sunscreen nights)"
                   }
                 ]
               },
