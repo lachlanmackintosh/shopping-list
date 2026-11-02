@@ -1045,26 +1045,26 @@ var SHOPPING = {
               },
               {
                 "id": "care-deodorant",
-                "name": "Deodorant: natural aluminium-free, to be confirmed",
+                "name": "Deodorant",
                 "options": [
                   {
                     "gold": true,
-                    "name": "MooGoo"
+                    "name": "MooGoo Sensitive & Fragrance-Free (daily; all MooGoo deodorants OK)"
                   },
                   {
-                    "name": "Noosa Basics"
+                    "name": "TEST by XVLABS"
                   },
                   {
-                    "name": "KIND-LY Lime & Frankincense"
+                    "name": "Patricks ND1"
                   },
                   {
-                    "name": "Woohoo"
+                    "name": "Tuttofare"
                   },
                   {
-                    "name": "Patricks"
+                    "name": "Two Dudes (Woolies)"
                   },
                   {
-                    "name": "Two Dudes"
+                    "name": "KIND-LY Lime & Frankincense (Chemist Warehouse)"
                   }
                 ]
               }
