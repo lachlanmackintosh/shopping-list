@@ -1075,33 +1075,33 @@ var SHOPPING = {
                     "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/124267/moogoo-natural-fresh-cream-deodorant-sensitive-60ml", "type": "in-store + online"}, {"store": "Woolworths (online)", "url": "https://www.woolworths.com.au/shop/productdetails/1118255595/moogoo-fresh-cream-deodorant-sensitive-60ml", "type": "online"}, {"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/deodorant-sensitive-60ml", "type": "online"}, {"store": "OzHerbs", "url": "https://ozherbs.com.au/products/moogoo-deodorant-sensitive-60ml", "type": "online"}]
                   },
                   {
-                    "name": "2. TEST by XVLABS",
+                    "name": "2. Woohoo",
+                    "note": "Get Mellow (no bicarb, no scent) or Tango",
+                    "buy": [{"store": "Chemist Direct", "url": "https://www.chemistdirect.com.au/brands/woohoo", "type": "online"}, {"store": "Woohoo (brand site + stockist map)", "url": "https://www.woohoobody.com.au/pages/stockists", "type": "online"}]
+                  },
+                  {
+                    "name": "3. TEST by XVLABS",
                     "note": "Only 3 essential oils, simple",
                     "buy": [{"store": "TEST by XVLABS (brand site)", "url": "https://testbyxvlabs.com/products/test-deodorant", "type": "online"}]
                   },
                   {
-                    "name": "3. Tuttofare",
-                    "note": "Short natural formula",
+                    "name": "4. Tuttofare",
+                    "note": "Tallow + bicarb, 2 oils",
                     "buy": [{"store": "Clean Nectarine", "url": "https://cleannectarine.com.au/products/tuttofare-natural-deodorant", "type": "online"}, {"store": "Natural Supply Co (Geelong)", "url": "https://naturalsupplyco.com/products/tuttofare-natural-deodorant", "type": "in-store + online"}, {"store": "Heartwood (WA)", "url": "https://heartwoodco.com.au/collections/tuttofare/deodorant", "type": "in-store + online"}]
                   },
                   {
-                    "name": "4. KIND-LY Lime & Frankincense (Chemist Warehouse)",
-                    "note": "Magnesium + probiotic, essential oils",
+                    "name": "5. KIND-LY Lime & Frankincense (Chemist Warehouse)",
+                    "note": "Bicarb-heavy, 4 citrus/herb oils",
                     "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/100291/kind-ly-natural-deodorant-lime-frankincense", "type": "in-store + online"}, {"store": "KIND-LY (brand site)", "url": "https://kind-ly.com.au/products/lime-frankincense-natural-deodorant", "type": "online"}, {"store": "Amama", "url": "https://www.amama.com.au/kind-ly-natural-deodorant-lime-frankincense", "type": "online"}]
                   },
                   {
-                    "name": "5. Noosa Basics",
-                    "note": "Magnesium, but alcohol + many oils",
+                    "name": "6. Noosa Basics",
+                    "note": "Bicarb + benzyl alcohol, 4 oils",
                     "buy": [{"store": "Priceline", "url": "https://www.priceline.com.au/brand/noosa-basics", "type": "in-store + online"}, {"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122404359", "type": "online"}, {"store": "Noosa Basics (brand site)", "url": "https://www.noosabasics.com/", "type": "online"}]
                   },
                   {
-                    "name": "6. Woohoo",
-                    "note": "Bicarb can irritate",
-                    "buy": [{"store": "Chemist Direct", "url": "https://www.chemistdirect.com.au/brands/woohoo", "type": "online"}, {"store": "Woohoo (brand site + stockist map)", "url": "https://www.woohoobody.com.au/pages/stockists", "type": "online"}]
-                  },
-                  {
                     "name": "7. Two Dudes (Woolies)",
-                    "note": "Bicarb + essential oils",
+                    "note": "Bicarb + vague 'fragrance'",
                     "buy": [{"store": "Woolworths", "url": "https://shophop.au/product/564799", "type": "in-store + online"}, {"store": "Two Dudes (brand site)", "url": "https://twodudesproject.com/products/deodorant", "type": "online"}]
                   },
                   {
