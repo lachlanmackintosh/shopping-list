@@ -1065,6 +1065,12 @@ var SHOPPING = {
                   },
                   {
                     "name": "KIND-LY Lime & Frankincense (Chemist Warehouse)"
+                  },
+                  {
+                    "name": "Noosa Basics"
+                  },
+                  {
+                    "name": "Woohoo"
                   }
                 ]
               }
