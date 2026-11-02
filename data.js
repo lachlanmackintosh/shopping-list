@@ -1075,7 +1075,7 @@ var SHOPPING = {
                     "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/124267/moogoo-natural-fresh-cream-deodorant-sensitive-60ml", "type": "in-store + online"}, {"store": "Woolworths (online)", "url": "https://www.woolworths.com.au/shop/productdetails/1118255595/moogoo-fresh-cream-deodorant-sensitive-60ml", "type": "online"}, {"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/deodorant-sensitive-60ml", "type": "online"}, {"store": "OzHerbs", "url": "https://ozherbs.com.au/products/moogoo-deodorant-sensitive-60ml", "type": "online"}]
                   },
                   {
-                    "name": "2. Woohoo",
+                    "name": "2. Woohoo Mellow or Tango (no bicarb)",
                     "note": "Get Mellow (no bicarb, no scent) or Tango",
                     "buy": [{"store": "Chemist Direct", "url": "https://www.chemistdirect.com.au/brands/woohoo", "type": "online"}, {"store": "Woohoo (brand site + stockist map)", "url": "https://www.woohoobody.com.au/pages/stockists", "type": "online"}]
                   },
