@@ -908,10 +908,10 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "The Ordinary Natural Moisturizing Factors + HA"
+                    "name": "MooGoo Full Cream Moisturiser (daily)"
                   },
                   {
-                    "name": "MooGoo Full Cream Moisturiser"
+                    "name": "The Ordinary Natural Moisturizing Factors + HA (light, hot days)"
                   }
                 ]
               },
@@ -935,10 +935,10 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "The Ordinary Natural Moisturizing Factors + Inulin"
+                    "name": "MooGoo Full Cream Moisturiser (daily)"
                   },
                   {
-                    "name": "MooGoo Full Cream Moisturiser"
+                    "name": "The Ordinary Natural Moisturizing Factors + Inulin (light, hot days)"
                   }
                 ]
               },
