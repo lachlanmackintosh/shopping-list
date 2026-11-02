@@ -908,10 +908,12 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "MooGoo Full Cream Moisturiser (daily)"
+                    "name": "MooGoo Full Cream Moisturiser (daily)",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/109383/moogoo-natural-full-cream-moisturiser-120g", "type": "in-store + online"}, {"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/full-cream-moisturiser", "type": "online"}, {"store": "Priceline", "url": "https://www.priceline.com.au/brand/moogoo", "type": "in-store + online"}, {"store": "Healthy Bee (health food)", "url": "https://healthybee.com.au/product-detail.php?pd=moogoo-full-cream-moisturiser", "type": "in-store + online"}]
                   },
                   {
-                    "name": "The Ordinary Natural Moisturizing Factors + HA (light, hot days)"
+                    "name": "The Ordinary Natural Moisturizing Factors + HA (light, hot days)",
+                    "buy": [{"store": "Adore Beauty", "url": "https://www.adorebeauty.com.au/b/the-ordinary.html", "type": "online"}, {"store": "Sephora", "url": "https://www.sephora.com.au/brands/the-ordinary", "type": "in-store + online"}, {"store": "Priceline", "url": "https://www.priceline.com.au/beauty/the-ordinary-product-guide", "type": "in-store + online"}]
                   }
                 ]
               },
@@ -921,11 +923,13 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "MooGoo creamy cleanser (blue bottle, daily)"
+                    "name": "MooGoo creamy cleanser (blue bottle, daily)",
+                    "buy": [{"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/creamy-hydrating-face-cleanser-250ml", "type": "online"}, {"store": "Priceline", "url": "https://www.priceline.com.au/brand/moogoo", "type": "in-store + online"}]
                   },
                   {
                     "gold": true,
-                    "name": "The Ordinary Squalane Cleanser (heavy-sunscreen nights)"
+                    "name": "The Ordinary Squalane Cleanser (heavy-sunscreen nights)",
+                    "buy": [{"store": "Adore Beauty", "url": "https://www.adorebeauty.com.au/p/the-ordinary/the-ordinary-squalane-cleanser-150ml.html", "type": "online"}, {"store": "Sephora", "url": "https://www.sephora.com.au/brands/the-ordinary/skincare/cleanser-and-exfoliator", "type": "in-store + online"}, {"store": "Myer", "url": "https://www.myer.com.au/p/the-ordinary-squalane-cleanser-50ml", "type": "in-store + online"}, {"store": "Lookfantastic", "url": "https://lookfantastic.com.au/products/the-ordinary-squalane-cleanser-150ml", "type": "online"}, {"store": "The Ordinary (brand site)", "url": "https://theordinary.com/en-au/squalane-cleanser-face-cleanser-100613.html", "type": "online"}]
                   }
                 ]
               },
@@ -935,10 +939,12 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "MooGoo Full Cream Moisturiser (daily)"
+                    "name": "MooGoo Full Cream Moisturiser (daily)",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/109383/moogoo-natural-full-cream-moisturiser-120g", "type": "in-store + online"}, {"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/full-cream-moisturiser", "type": "online"}, {"store": "Priceline", "url": "https://www.priceline.com.au/brand/moogoo", "type": "in-store + online"}, {"store": "Healthy Bee (health food)", "url": "https://healthybee.com.au/product-detail.php?pd=moogoo-full-cream-moisturiser", "type": "in-store + online"}]
                   },
                   {
-                    "name": "The Ordinary Natural Moisturizing Factors + Inulin (light, hot days)"
+                    "name": "The Ordinary Natural Moisturizing Factors + Inulin (light, hot days)",
+                    "buy": [{"store": "Adore Beauty", "url": "https://www.adorebeauty.com.au/b/the-ordinary.html", "type": "online"}, {"store": "Sephora", "url": "https://www.sephora.com.au/brands/the-ordinary", "type": "in-store + online"}, {"store": "The Ordinary (brand site)", "url": "https://theordinary.com/en-au/", "type": "online"}]
                   }
                 ]
               },
@@ -948,10 +954,12 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Thankyou Lemon Myrtle & Oat Milk"
+                    "name": "Thankyou Lemon Myrtle & Oat Milk",
+                    "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/303986/thankyou-body-wash-botanical-lemon-myrtle-oat-milk-pump", "type": "in-store + online"}, {"store": "Coles", "url": "https://shophop.au/product/14834", "type": "in-store + online"}, {"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/128095/thankyou-body-wash-botanical-lemon-myrtle-oat-milk-1l", "type": "in-store + online"}]
                   },
                   {
-                    "name": "Sukin"
+                    "name": "Sukin",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/64425/sukin-signature-botanical-body-wash-500ml", "type": "in-store + online"}, {"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/147400/sukin-signature-botanical-body-wash", "type": "in-store + online"}, {"store": "Discount Chemist", "url": "https://discountchemist.com.au/sukin-botanical-body-wash-500ml/", "type": "online"}]
                   }
                 ]
               },
@@ -961,10 +969,12 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Thankyou Lemon Myrtle & Oat Milk Hand & Body Wash 1 L refill"
+                    "name": "Thankyou Lemon Myrtle & Oat Milk Hand & Body Wash 1 L refill",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/128101/thankyou-hand-body-wash-botanical-lemon-myrtle-oat-milk-refill-1l", "type": "in-store + online"}, {"store": "Woolworths", "url": "https://shophop.au/product/14834", "type": "in-store + online"}, {"store": "Coles", "url": "https://shophop.au/product/14834", "type": "in-store + online"}]
                   },
                   {
-                    "name": "ecostore Ultra Sensitive Hand Wash"
+                    "name": "ecostore Ultra Sensitive Hand Wash",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/138806/ecostore-ultra-sensitive-hand-wash-300ml", "type": "in-store + online"}, {"store": "Go Eco Store", "url": "https://www.goecostore.com.au/products/copy-of-hand-wash-rose-geranium-425ml-2", "type": "online"}, {"store": "IGA (some stores)", "url": "https://igacorowa.myfoodlink.com/lines/ecostore-h-wash-ultra-sens-425ml", "type": "in-store"}]
                   }
                 ]
               },
@@ -974,7 +984,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "MooGoo Milk Shampoo"
+                    "name": "MooGoo Milk Shampoo",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/110285/moogoo-natural-milk-shampoo-500ml", "type": "in-store + online"}, {"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/", "type": "online"}]
                   }
                 ]
               },
@@ -984,7 +995,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "MooGoo Cream Conditioner"
+                    "name": "MooGoo Cream Conditioner",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/110283/moogoo-natural-cream-conditioner-500ml", "type": "in-store + online"}, {"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/", "type": "online"}]
                   }
                 ]
               },
@@ -994,7 +1006,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "PrimalPantry Tallow Hair Clay (trialling)"
+                    "name": "PrimalPantry Tallow Hair Clay (trialling)",
+                    "buy": [{"store": "PrimalPantry (brand site, ships from NZ)", "url": "https://primalpantry.com.au/products/tallow-hair-clay", "type": "online"}]
                   }
                 ]
               },
@@ -1004,7 +1017,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Toxin Dodger soft horsehair toothbrush"
+                    "name": "Toxin Dodger soft horsehair toothbrush",
+                    "buy": [{"store": "Toxin Dodger", "url": "https://toxindodger.com/products/boar-bristle-toothbrush", "type": "online"}]
                   }
                 ]
               },
@@ -1014,13 +1028,16 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Toxin Dodger silk floss"
+                    "name": "Toxin Dodger silk floss",
+                    "buy": [{"store": "Toxin Dodger", "url": "https://toxindodger.com/products/zero-plastic-silk-floss", "type": "online"}]
                   },
                   {
-                    "name": "Turtle Tribe silk floss"
+                    "name": "Turtle Tribe silk floss",
+                    "buy": [{"store": "The Turtle Tribe (brand site)", "url": "https://theturtletribe.com.au/products/the-turtle-tribe-silk-floss-30m", "type": "online"}, {"store": "Clean & Pure", "url": "https://cleanandpure.com.au/products/the-turtle-tribe-silk-floss-30m", "type": "online"}, {"store": "The Wellness Grove", "url": "https://www.thewellnessgrove.com.au/product/ttt-dental-floss-silk-mint-flavour-30m/HSVMTJ7WF4SVD4JW7SQ4NAAF", "type": "in-store + online"}]
                   },
                   {
-                    "name": "RADIUS Pure Silk"
+                    "name": "RADIUS Pure Silk",
+                    "buy": [{"store": "Amazon AU", "url": "https://www.amazon.com.au/Radius-Natural-Biodegradable-Silk-Floss/dp/B001BBNS7E", "type": "online"}]
                   }
                 ]
               },
@@ -1030,16 +1047,20 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Grants hydroxyapatite whitening"
+                    "name": "Grants hydroxyapatite whitening",
+                    "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/6055328/grants-whitening-ha-toothpaste", "type": "in-store + online"}, {"store": "BIG W (Healthylife)", "url": "https://www.bigw.com.au/product/grants-whitening-with-ha-natural-toothpaste-110g/p/9900713014", "type": "online"}, {"store": "Norwood Health Foods", "url": "https://norwoodhealthfoods.com.au/product/grants-whitening-ha-natural-toothpaste-110g/", "type": "in-store + online"}]
                   },
                   {
-                    "name": "MooGoo hydroxyapatite"
+                    "name": "MooGoo hydroxyapatite",
+                    "buy": [{"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/natural-toothpaste-fluoride-free-100g", "type": "online"}, {"store": "Chemist Direct", "url": "https://www.chemistdirect.com.au/moogoo-moothpaste-fluoride-free-100g", "type": "online"}, {"store": "Pharmacy Online", "url": "https://www.pharmacyonline.com.au/moogoo-moothpaste-fluoride-free-100g", "type": "online"}]
                   },
                   {
-                    "name": "Grin Pro Enamel Care + Nano-Hydroxyapatite"
+                    "name": "Grin Pro Enamel Care + Nano-Hydroxyapatite",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/150635/grin-toothpaste-pro-enamel-care-nano-hydroxyapatite-fluoride-free-113g", "type": "in-store + online"}, {"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1123912387/grin-pro-enamel-care-toothpaste-with-nano-hydroxyapatite-113g", "type": "online"}, {"store": "Healthylife", "url": "https://www.healthylife.com.au/products/grin-pro-enamel-care-toothpaste-with-nano-hydroxyapatite-113g", "type": "online"}, {"store": "Clean Nectarine", "url": "https://cleannectarine.com.au/products/grin-pro-toothpaste-enamel-care-with-nano-hydroxyapatite", "type": "online"}]
                   },
                   {
-                    "name": "Red Seal Baking Soda + Hydroxyapatite"
+                    "name": "Red Seal Baking Soda + Hydroxyapatite",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/164219/red-seal-toothpaste-baking-soda-ha-100g", "type": "in-store + online"}, {"store": "Red Seal (brand site)", "url": "https://www.redseal.global/au/our-products/oral-care/red-seal-baking-soda-hydroxyapatite-toothpaste-100g/", "type": "online"}]
                   }
                 ]
               },
@@ -1049,28 +1070,36 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "MooGoo Sensitive & Fragrance-Free (daily; all MooGoo deodorants OK)"
+                    "name": "MooGoo Sensitive & Fragrance-Free (daily; all MooGoo deodorants OK)",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/124267/moogoo-natural-fresh-cream-deodorant-sensitive-60ml", "type": "in-store + online"}, {"store": "Woolworths (online)", "url": "https://www.woolworths.com.au/shop/productdetails/1118255595/moogoo-fresh-cream-deodorant-sensitive-60ml", "type": "online"}, {"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/deodorant-sensitive-60ml", "type": "online"}, {"store": "OzHerbs", "url": "https://ozherbs.com.au/products/moogoo-deodorant-sensitive-60ml", "type": "online"}]
                   },
                   {
-                    "name": "TEST by XVLABS"
+                    "name": "TEST by XVLABS",
+                    "buy": [{"store": "TEST by XVLABS (brand site)", "url": "https://testbyxvlabs.com/products/test-deodorant", "type": "online"}]
                   },
                   {
-                    "name": "Patricks ND1"
+                    "name": "Patricks ND1",
+                    "buy": [{"store": "Patricks (brand site)", "url": "https://www.patricks.com.au/products/travel-nd1-natural-deodorant-32g-copy", "type": "online"}, {"store": "David Jones", "url": "https://www.davidjones.com/product/patricks-nd1-%60-natural-deodorant-75g-25853671", "type": "in-store + online"}, {"store": "NOAH (Melbourne)", "url": "https://noah.com.au/products/patricks-nd1-natural-deodorant-75g", "type": "in-store + online"}]
                   },
                   {
-                    "name": "Tuttofare"
+                    "name": "Tuttofare",
+                    "buy": [{"store": "Clean Nectarine", "url": "https://cleannectarine.com.au/products/tuttofare-natural-deodorant", "type": "online"}, {"store": "Natural Supply Co (Geelong)", "url": "https://naturalsupplyco.com/products/tuttofare-natural-deodorant", "type": "in-store + online"}, {"store": "Heartwood (WA)", "url": "https://heartwoodco.com.au/collections/tuttofare/deodorant", "type": "in-store + online"}]
                   },
                   {
-                    "name": "Two Dudes (Woolies)"
+                    "name": "Two Dudes (Woolies)",
+                    "buy": [{"store": "Woolworths", "url": "https://shophop.au/product/564799", "type": "in-store + online"}, {"store": "Two Dudes (brand site)", "url": "https://twodudesproject.com/products/deodorant", "type": "online"}]
                   },
                   {
-                    "name": "KIND-LY Lime & Frankincense (Chemist Warehouse)"
+                    "name": "KIND-LY Lime & Frankincense (Chemist Warehouse)",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/100291/kind-ly-natural-deodorant-lime-frankincense", "type": "in-store + online"}, {"store": "KIND-LY (brand site)", "url": "https://kind-ly.com.au/products/lime-frankincense-natural-deodorant", "type": "online"}, {"store": "Amama", "url": "https://www.amama.com.au/kind-ly-natural-deodorant-lime-frankincense", "type": "online"}]
                   },
                   {
-                    "name": "Noosa Basics"
+                    "name": "Noosa Basics",
+                    "buy": [{"store": "Priceline", "url": "https://www.priceline.com.au/brand/noosa-basics", "type": "in-store + online"}, {"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122404359", "type": "online"}, {"store": "Noosa Basics (brand site)", "url": "https://www.noosabasics.com/", "type": "online"}]
                   },
                   {
-                    "name": "Woohoo"
+                    "name": "Woohoo",
+                    "buy": [{"store": "Chemist Direct", "url": "https://www.chemistdirect.com.au/brands/woohoo", "type": "online"}, {"store": "Woohoo (brand site + stockist map)", "url": "https://www.woohoobody.com.au/pages/stockists", "type": "online"}]
                   }
                 ]
               }
@@ -1086,7 +1115,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "The Ordinary Multi-Peptide + Copper Peptides"
+                    "name": "The Ordinary Multi-Peptide + Copper Peptides",
+                    "buy": [{"store": "The Ordinary (brand site)", "url": "https://theordinary.com/en-au/multi-peptide-copper-peptides-1-serum-769915233179.html", "type": "online"}, {"store": "Adore Beauty", "url": "https://www.adorebeauty.com.au/b/the-ordinary.html", "type": "online"}, {"store": "Sephora", "url": "https://www.sephora.com.au/brands/the-ordinary", "type": "in-store + online"}]
                   }
                 ]
               },
@@ -1096,7 +1126,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "The Ordinary squalane"
+                    "name": "The Ordinary squalane",
+                    "buy": [{"store": "The Ordinary (brand site)", "url": "https://theordinary.com/en-au/100-plant-derived-squalane-face-oil-100398.html", "type": "online"}, {"store": "Adore Beauty", "url": "https://www.adorebeauty.com.au/b/the-ordinary.html", "type": "online"}, {"store": "Sephora", "url": "https://www.sephora.com.au/brands/the-ordinary", "type": "in-store + online"}]
                   }
                 ]
               },
@@ -1106,7 +1137,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Sylvawell Discovery Set ($59), test Sanctum or Sylva first"
+                    "name": "Sylvawell Discovery Set ($59), test Sanctum or Sylva first",
+                    "buy": [{"store": "Sylvawell (brand site)", "url": "https://sylvawell.com/products/discovery-set", "type": "online"}]
                   }
                 ]
               },
@@ -1116,7 +1148,8 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "The Ordinary Lactic Acid 5% + HA"
+                    "name": "The Ordinary Lactic Acid 5% + HA",
+                    "buy": [{"store": "The Ordinary (brand site)", "url": "https://theordinary.com/en-au/lactic-acid-5-ha-exfoliator-100427.html", "type": "online"}, {"store": "Adore Beauty", "url": "https://www.adorebeauty.com.au/b/the-ordinary.html", "type": "online"}, {"store": "Sephora", "url": "https://www.sephora.com.au/brands/the-ordinary", "type": "in-store + online"}]
                   }
                 ]
               }
@@ -1133,10 +1166,12 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Thankyou Lemon Myrtle & Oat Milk"
+                    "name": "Thankyou Lemon Myrtle & Oat Milk",
+                    "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/303986/thankyou-body-wash-botanical-lemon-myrtle-oat-milk-pump", "type": "in-store + online"}, {"store": "Coles", "url": "https://shophop.au/product/14834", "type": "in-store + online"}, {"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/128095/thankyou-body-wash-botanical-lemon-myrtle-oat-milk-1l", "type": "in-store + online"}]
                   },
                   {
-                    "name": "Sukin"
+                    "name": "Sukin",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/64425/sukin-signature-botanical-body-wash-500ml", "type": "in-store + online"}, {"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/147400/sukin-signature-botanical-body-wash", "type": "in-store + online"}, {"store": "Discount Chemist", "url": "https://discountchemist.com.au/sukin-botanical-body-wash-500ml/", "type": "online"}]
                   }
                 ],
                 "info": "Shared with Lockie."
@@ -1147,10 +1182,12 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Thankyou Lemon Myrtle & Oat Milk Hand & Body Wash 1 L refill"
+                    "name": "Thankyou Lemon Myrtle & Oat Milk Hand & Body Wash 1 L refill",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/128101/thankyou-hand-body-wash-botanical-lemon-myrtle-oat-milk-refill-1l", "type": "in-store + online"}, {"store": "Woolworths", "url": "https://shophop.au/product/14834", "type": "in-store + online"}, {"store": "Coles", "url": "https://shophop.au/product/14834", "type": "in-store + online"}]
                   },
                   {
-                    "name": "ecostore Ultra Sensitive Hand Wash"
+                    "name": "ecostore Ultra Sensitive Hand Wash",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/138806/ecostore-ultra-sensitive-hand-wash-300ml", "type": "in-store + online"}, {"store": "Go Eco Store", "url": "https://www.goecostore.com.au/products/copy-of-hand-wash-rose-geranium-425ml-2", "type": "online"}, {"store": "IGA (some stores)", "url": "https://igacorowa.myfoodlink.com/lines/ecostore-h-wash-ultra-sens-425ml", "type": "in-store"}]
                   }
                 ],
                 "info": "Shared with Lockie."
@@ -1161,16 +1198,20 @@ var SHOPPING = {
                 "options": [
                   {
                     "gold": true,
-                    "name": "Grants hydroxyapatite whitening"
+                    "name": "Grants hydroxyapatite whitening",
+                    "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/6055328/grants-whitening-ha-toothpaste", "type": "in-store + online"}, {"store": "BIG W (Healthylife)", "url": "https://www.bigw.com.au/product/grants-whitening-with-ha-natural-toothpaste-110g/p/9900713014", "type": "online"}, {"store": "Norwood Health Foods", "url": "https://norwoodhealthfoods.com.au/product/grants-whitening-ha-natural-toothpaste-110g/", "type": "in-store + online"}]
                   },
                   {
-                    "name": "MooGoo hydroxyapatite"
+                    "name": "MooGoo hydroxyapatite",
+                    "buy": [{"store": "MooGoo (brand site)", "url": "https://moogoo.com.au/products/natural-toothpaste-fluoride-free-100g", "type": "online"}, {"store": "Chemist Direct", "url": "https://www.chemistdirect.com.au/moogoo-moothpaste-fluoride-free-100g", "type": "online"}, {"store": "Pharmacy Online", "url": "https://www.pharmacyonline.com.au/moogoo-moothpaste-fluoride-free-100g", "type": "online"}]
                   },
                   {
-                    "name": "Grin Pro Enamel Care + Nano-Hydroxyapatite"
+                    "name": "Grin Pro Enamel Care + Nano-Hydroxyapatite",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/150635/grin-toothpaste-pro-enamel-care-nano-hydroxyapatite-fluoride-free-113g", "type": "in-store + online"}, {"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1123912387/grin-pro-enamel-care-toothpaste-with-nano-hydroxyapatite-113g", "type": "online"}, {"store": "Healthylife", "url": "https://www.healthylife.com.au/products/grin-pro-enamel-care-toothpaste-with-nano-hydroxyapatite-113g", "type": "online"}, {"store": "Clean Nectarine", "url": "https://cleannectarine.com.au/products/grin-pro-toothpaste-enamel-care-with-nano-hydroxyapatite", "type": "online"}]
                   },
                   {
-                    "name": "Red Seal Baking Soda + Hydroxyapatite"
+                    "name": "Red Seal Baking Soda + Hydroxyapatite",
+                    "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/164219/red-seal-toothpaste-baking-soda-ha-100g", "type": "in-store + online"}, {"store": "Red Seal (brand site)", "url": "https://www.redseal.global/au/our-products/oral-care/red-seal-baking-soda-hydroxyapatite-toothpaste-100g/", "type": "online"}]
                   }
                 ],
                 "info": "Shared with Lockie."
@@ -1199,10 +1240,12 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Koh Universal Cleaner"
+                  "name": "Koh Universal Cleaner",
+                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/907520/koh-universal-cleaner", "type": "in-store + online"}, {"store": "Amazon AU", "url": "https://www.amazon.com.au/Koh-Universal-Cleaner-2-Ingredient-Multi-Purpose/dp/B0DNP29X63", "type": "online"}, {"store": "Koh (store list)", "url": "https://help.koh.com/en-US/koh-in-store-stockists-738159", "type": "online"}]
                 },
                 {
-                  "name": "ecostore Ultra Sensitive Multi-Purpose"
+                  "name": "ecostore Ultra Sensitive Multi-Purpose",
+                  "buy": [{"store": "ecostore (brand site)", "url": "https://ecostore.com/en-au/products/ultra-sensitive-multi-purpose-cleaner-500ml", "type": "online"}, {"store": "Nourished Life", "url": "https://www.nourishedlife.com.au/products/ecostore-multi-purpose-cleaner-ultra-sensitive", "type": "online"}, {"store": "Go Eco Store", "url": "https://www.goecostore.com.au/products/copy-of-multi-purpose-kitchen-cleaner-orange-thyme-500ml", "type": "online"}]
                 }
               ]
             },
@@ -1212,7 +1255,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Hydro-E HOCl Hospital Grade Disinfectant"
+                  "name": "Hydro-E HOCl Hospital Grade Disinfectant",
+                  "buy": [{"store": "Hydro-E (brand site)", "url": "https://www.hydro-e.com.au/products/hydro-e-hocl-hospital-grade-disinfectant-500ml-trigger-spray", "type": "online"}, {"store": "Enviro Chemicals", "url": "https://envirochemicals.com.au/product/hydro-e/", "type": "online"}, {"store": "Majac Medical", "url": "https://majacmedical.com.au/products/hydro-e-natural-hospital-grade-disinfectant-non-toxic/", "type": "online"}]
                 }
               ]
             },
@@ -1222,13 +1266,16 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Resparkle Fragrance-Free Laundry Powder"
+                  "name": "Resparkle Fragrance-Free Laundry Powder",
+                  "buy": [{"store": "Resparkle (brand site, online only)", "url": "https://resparkle.com.au/products/natural-laundry-powder", "type": "online"}]
                 },
                 {
-                  "name": "Herbon Fragrance-Free"
+                  "name": "Herbon Fragrance-Free",
+                  "buy": [{"store": "Herbon (brand site + store locator)", "url": "https://herbon.com.au/", "type": "online"}, {"store": "Cleaners Gallery", "url": "https://cleanersgallery.com.au/products/herbon-laundry-liquid-fragrance-free-1-25-lt-2lt-20lt", "type": "online"}, {"store": "Michael's Chemist", "url": "https://michaelschemist.com.au/products/herbon-laundry-liquid-fragrance-free-125l", "type": "online"}, {"store": "IGA (some stores)", "type": "in-store"}]
                 },
                 {
-                  "name": "Abode Zero Laundry Powder"
+                  "name": "Abode Zero Laundry Powder",
+                  "buy": [{"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122172663/abode-laundry-powder-zero-1kg", "type": "online"}, {"store": "BIG W (online)", "url": "https://www.bigw.com.au/product/abode-laundry-powder-zero-1kg/p/9900694629", "type": "online"}]
                 }
               ]
             },
@@ -1238,13 +1285,16 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Hudstone Soaker"
+                  "name": "Hudstone Soaker",
+                  "buy": [{"store": "Hudstone (brand site)", "url": "https://hudstonehome.com/products/hudstone-pre-soaker-2kg-80-soaks-per-bag", "type": "online"}, {"store": "Hudstone refill (Taren Point NSW)", "url": "https://hudstonehome.com/pages/refill", "type": "in-store"}]
                 },
                 {
-                  "name": "Kin Kin Laundry Soaker"
+                  "name": "Kin Kin Laundry Soaker",
+                  "buy": [{"store": "Shop Naturally", "url": "https://www.shopnaturally.com.au/product/kinkin-laundry-soaker/", "type": "online"}, {"store": "Market Organics", "url": "https://shop.marketorganics.com.au/lines/kin-kin-naturals-laundry-soaker-stain-rem-lime-euc-1-2kg-1g", "type": "online"}]
                 },
                 {
-                  "name": "MiEco sodium percarbonate"
+                  "name": "MiEco sodium percarbonate",
+                  "buy": [{"store": "MiEco (brand site)", "url": "https://mieco.com.au/product/mieco-oxygen-bleach-900g/", "type": "online"}, {"store": "Santos Organics", "url": "https://santosorganics.com.au/products/oxygen-bleach-900g-mieco", "type": "in-store + online"}, {"store": "Earth Wholefoods", "url": "https://earthwholefood.com.au/product/mieco-oxygen-bleach-900g/", "type": "in-store + online"}, {"store": "Manna Wholefoods (WA)", "url": "https://shop.mannawholefoods.com.au/lines/mieco-oxygen-bleach-900g", "type": "in-store + online"}]
                 }
               ]
             },
@@ -1254,10 +1304,12 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Hudstone Dishwashing Powder"
+                  "name": "Hudstone Dishwashing Powder",
+                  "buy": [{"store": "Hudstone (brand site)", "url": "https://hudstonehome.com/products/dishwashing-powder", "type": "online"}, {"store": "The Fill Market", "url": "https://www.thefillmarket.com/brands/hudstone-cleaning-products", "type": "online"}]
                 },
                 {
-                  "name": "Kin Kin Dishwasher Powder"
+                  "name": "Kin Kin Dishwasher Powder",
+                  "buy": [{"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122347493", "type": "online"}, {"store": "BIG W (online)", "url": "https://www.bigw.com.au/product/kin-kin-naturals-eco-dishwash-powder-lime-and-lemon-myrtle-2-5kg/p/9900695196", "type": "online"}]
                 }
               ]
             },
@@ -1267,13 +1319,16 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Earth Choice Sensitive Concentrated"
+                  "name": "Earth Choice Sensitive Concentrated",
+                  "buy": [{"store": "Earth Choice (brand site)", "url": "https://earthchoice.com.au/products/sensitive-concentrated-dishwashing-liquid-500ml", "type": "online"}, {"store": "IGA", "url": "https://www.igashop.com.au/product/earth-choice-concentrated-dishwashing-liquid-sensitive-180000007371", "type": "in-store + online"}, {"store": "Chemist Warehouse", "type": "in-store + online"}]
                 },
                 {
-                  "name": "ecostore Ultra Sensitive Dish"
+                  "name": "ecostore Ultra Sensitive Dish",
+                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/742382/ecostore-dish-liquid-ultrasensitive", "type": "in-store + online"}, {"store": "ecostore (brand site)", "url": "https://ecostore.com/en-au/products/ultra-sensitive-dish-liquid-500ml", "type": "online"}]
                 },
                 {
-                  "name": "Abode Zero Dish Liquid"
+                  "name": "Abode Zero Dish Liquid",
+                  "buy": [{"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122169583/abode-dishwashing-liquid-concentrate-zero", "type": "online"}]
                 }
               ]
             },
@@ -1283,10 +1338,12 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "SimplyClean HealthyClean Bathroom"
+                  "name": "SimplyClean HealthyClean Bathroom",
+                  "buy": [{"store": "SimplyClean (brand site)", "url": "https://www.simplyclean.com.au/products/healthyclean-bathroom-500ml", "type": "online"}, {"store": "BIG W", "url": "https://www.bigw.com.au/product/simplyclean-healthyclean-bathroom-500ml/p/9906759408", "type": "online"}, {"store": "Vitalia", "url": "https://www.vitalia.com.au/simply-clean-Healthy-Clean-Bathroom-500ml", "type": "online"}, {"store": "Your Health Store", "url": "https://www.yourhealthstore.net.au/simply-clean-healthy-clean-bathroom-500ml", "type": "in-store + online"}]
                 },
                 {
-                  "name": "ecostore Bathroom Concentrate"
+                  "name": "ecostore Bathroom Concentrate",
+                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/162051/ecostore-bathroom-shower-cleaner-refill-concentrate", "type": "in-store + online"}, {"store": "ecostore (brand site)", "url": "https://ecostore.com/en-au/products/bathroom-shower-cleaner-refill-concentrate-50ml", "type": "online"}, {"store": "Flora & Fauna", "url": "https://www.floraandfauna.com.au/products/ecostore-bathroom-shower-cleaner-citrus", "type": "online"}]
                 }
               ]
             },
@@ -1296,7 +1353,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Abode Rosemary & Mint Toilet Gel"
+                  "name": "Abode Rosemary & Mint Toilet Gel",
+                  "buy": [{"store": "Healthylife (also via Woolworths online)", "url": "https://www.healthylife.com.au/products/abode-toilet-gel-rosemary-mint-750ml", "type": "online"}, {"store": "BIG W (online)", "url": "https://www.bigw.com.au/product/abode-toilet-gel-rosemary-mint/p/9904185922", "type": "online"}]
                 }
               ]
             },
@@ -1306,7 +1364,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "SimplyClean Simply NO Mould"
+                  "name": "SimplyClean Simply NO Mould",
+                  "buy": [{"store": "SimplyClean (brand site)", "url": "https://www.simplyclean.com.au/", "type": "online"}, {"store": "Woolworths", "type": "online"}, {"store": "Amazon AU", "type": "online"}, {"store": "Nourished Life", "type": "online"}]
                 }
               ]
             },
@@ -1316,7 +1375,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Citric acid (any brand)"
+                  "name": "Citric acid (any brand)",
+                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/344/mckenzies-acid-citric", "type": "in-store + online"}, {"store": "Coles", "url": "https://www.grocerize.com.au/product/7471437054035/mckenzie-s-citric-acid-75g", "type": "in-store + online"}]
                 }
               ]
             },
@@ -1326,7 +1386,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "CleanLIFE Surface Vinegar Wipes (trial)"
+                  "name": "CleanLIFE Surface Vinegar Wipes (trial)",
+                  "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/163550/cleanlife-surface-vinegar-wipes-100-pack", "type": "in-store + online"}, {"store": "Officeworks", "url": "https://www.officeworks.com.au/shop/officeworks/p/cleanlife-vinegar-cleaning-wipes-100-pack-mhcls00105", "type": "in-store + online"}, {"store": "Harris Farm", "url": "https://www.harrisfarm.com.au/products/clife-surface-biodegradable-vinegar-wipes-x100-100631", "type": "in-store + online"}, {"store": "CleanLIFE (store list)", "url": "https://cleanlife.com.au/stockists/", "type": "online"}]
                 }
               ]
             },
@@ -1336,7 +1397,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "PURELL Antiseptic Hand Foam 72%"
+                  "name": "PURELL Antiseptic Hand Foam 72%",
+                  "buy": [{"store": "RapidClean Gold Coast", "url": "https://rapidgc.com.au/products/prod-5791-04-aus00", "type": "in-store + online"}, {"store": "Sydney Cleaning Supplies", "url": "https://sydneycleaningsupplies.com.au/shop/chemicals/hand-sanitiser/purell-antiseptic-hand-foam-535ml/", "type": "online"}, {"store": "Hanleys", "url": "https://www.hanleys.com.au/purell-5791-antiseptic-sanitising-hand-foam-pump-bottle-535ml", "type": "online"}]
                 }
               ]
             }
@@ -1352,7 +1414,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Koala Eco Fragrance-Free Laundry Stain Spray"
+                  "name": "Koala Eco Fragrance-Free Laundry Stain Spray",
+                  "buy": [{"store": "Koala Eco (brand site)", "url": "https://koala.eco/products/laundry-stain-spray", "type": "online"}]
                 }
               ]
             },
@@ -1362,7 +1425,8 @@ var SHOPPING = {
               "options": [
                 {
                   "gold": true,
-                  "name": "Koala Eco Fragrance-Free Oxygenated Bleach"
+                  "name": "Koala Eco Fragrance-Free Oxygenated Bleach",
+                  "buy": [{"store": "Koala Eco (brand site)", "url": "https://koala.eco/products/oxygenated-bleach-brighten-whiten", "type": "online"}]
                 }
               ]
             }

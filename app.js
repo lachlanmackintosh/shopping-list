@@ -71,7 +71,7 @@
     if (!item.options || !item.options.length) return [];
     return item.options.map(function (opt) {
       if (typeof opt === "string") return { name: opt, note: "", gold: false };
-      return { name: opt.name, note: opt.note || "", gold: opt.gold === true };
+      return { name: opt.name, note: opt.note || "", gold: opt.gold === true, buy: opt.buy || [] };
     });
   }
 
@@ -616,6 +616,28 @@
       btn.appendChild(radio);
       btn.appendChild(copy);
       host.appendChild(btn);
+      if (opt.buy && opt.buy.length) {
+        var where = el("details", "buy");
+        where.appendChild(el("summary", "buy-sum", "Where to buy (" + opt.buy.length + ")"));
+        var ul = el("ul", "buy-list");
+        opt.buy.forEach(function (b) {
+          var li = el("li");
+          var name;
+          if (b.url) {
+            name = el("a", "buy-store", b.store);
+            name.href = b.url;
+            name.target = "_blank";
+            name.rel = "noopener";
+          } else {
+            name = el("span", "buy-store", b.store);
+          }
+          li.appendChild(name);
+          if (b.type) li.appendChild(el("span", "buy-type", b.type));
+          ul.appendChild(li);
+        });
+        where.appendChild(ul);
+        host.appendChild(where);
+      }
     });
     document.getElementById("sheet").hidden = false;
     document.body.classList.add("locked");
