@@ -488,6 +488,10 @@ var SHOPPING = {
             {
               "id": "chewing-gum",
               "name": "Chewing gum"
+            },
+            {
+              "id": "apple-cider-vinegar",
+              "name": "Apple cider vinegar (raw, unfiltered, with the mother)"
             }
           ]
         },
@@ -730,6 +734,10 @@ var SHOPPING = {
             {
               "id": "clean-descaling",
               "name": "Citric acid"
+            },
+            {
+              "id": "clean-vinegar",
+              "name": "White cleaning vinegar"
             },
             {
               "id": "clean-multipurpose-wipes",
