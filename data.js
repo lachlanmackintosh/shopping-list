@@ -686,6 +686,7 @@ var SHOPPING = {
     {
       "id": "cleaning",
       "label": "Cleaning",
+      "guide": {"title": "How to use", "items": ["Surface cleaner: benches, tables, stovetop. Spray, wipe with a damp cloth.", "Dishwashing liquid: dishes by hand; a few drops in a spray bottle of water also works as a bench spray.", "Dishwasher powder: half-fill the dispenser (about 15 mL).", "Laundry liquid: about 35 mL per load (check bottle); fragrance-free for skin.", "Laundry soaker: stains and smelly gear; soak 1–2 hrs or add a scoop to the wash.", "Mould cleaner (peroxide): grout, shower floor, silicone. Spray, leave 10–15 min, scrub, rinse.", "Shower glass: 1 tbsp citric acid in 500 mL warm water (or neat cleaning vinegar). Spray, leave 5–10 min, wipe. Squeegee after every shower.", "Toilet cleaner: under the rim, leave 10 min, brush, flush.", "Citric acid: also descales kettle and shower head (soak).", "Disinfectant: only for raw meat spills or sickness, not everyday.", "Safety: never mix acids (citric/vinegar) or peroxide with bleach; no acid on natural stone."]},
       "sections": [
         {
           "id": "cleaning-main",

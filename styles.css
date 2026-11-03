@@ -850,3 +850,4 @@ body.locked {
 .buy-store { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 span.buy-store { text-decoration: none; }
 .buy-type { color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
+.rules.guide { margin-top: 16px; padding-bottom: 24px; }

@@ -378,6 +378,16 @@
     visibleSections(group).forEach(function (section) {
       frag.appendChild(renderSection(section));
     });
+    if (group.guide) {
+      var gw = el("div", "rules guide");
+      var gd = el("details", "rule");
+      gd.appendChild(el("summary", null, group.guide.title));
+      var gu = el("ul");
+      group.guide.items.forEach(function (t) { gu.appendChild(el("li", null, t)); });
+      gd.appendChild(gu);
+      gw.appendChild(gd);
+      frag.appendChild(gw);
+    }
     if (activeGroup !== "food") {
       var secs = visibleSections(group);
       if (secs.length) frag.appendChild(addButton(secs[0].id));
