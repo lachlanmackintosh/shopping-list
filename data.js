@@ -625,11 +625,17 @@ var SHOPPING = {
             },
             {
               "id": "salt",
-              "name": "Batch-tested salt",
+              "name": "Salt",
               "options": [
                 {
                   "gold": true,
-                  "name": "Salt with batch heavy-metal testing"
+                  "name": "1. Maldon Sea Salt"
+                },
+                {
+                  "name": "2. Celtic Sea Salt"
+                },
+                {
+                  "name": "3. Redmond Real Salt"
                 }
               ]
             },
