@@ -1248,202 +1248,26 @@ var SHOPPING = {
         {
           "id": "cleaning-main",
           "items": [
-            {
-              "id": "clean-general-surfaces-kitchen",
-              "name": "General surfaces/kitchen",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Koh Universal Cleaner",
-                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/907520/koh-universal-cleaner", "type": "in-store + online"}, {"store": "Amazon AU", "url": "https://www.amazon.com.au/Koh-Universal-Cleaner-2-Ingredient-Multi-Purpose/dp/B0DNP29X63", "type": "online"}, {"store": "Koh (store list)", "url": "https://help.koh.com/en-US/koh-in-store-stockists-738159", "type": "online"}]
-                },
-                {
-                  "name": "ecostore Ultra Sensitive Multi-Purpose",
-                  "buy": [{"store": "ecostore (brand site)", "url": "https://ecostore.com/en-au/products/ultra-sensitive-multi-purpose-cleaner-500ml", "type": "online"}, {"store": "Nourished Life", "url": "https://www.nourishedlife.com.au/products/ecostore-multi-purpose-cleaner-ultra-sensitive", "type": "online"}, {"store": "Go Eco Store", "url": "https://www.goecostore.com.au/products/copy-of-multi-purpose-kitchen-cleaner-orange-thyme-500ml", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-targeted-disinfection",
-              "name": "Targeted disinfection",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Hydro-E HOCl Hospital Grade Disinfectant",
-                  "buy": [{"store": "Hydro-E (brand site)", "url": "https://www.hydro-e.com.au/products/hydro-e-hocl-hospital-grade-disinfectant-500ml-trigger-spray", "type": "online"}, {"store": "Enviro Chemicals", "url": "https://envirochemicals.com.au/product/hydro-e/", "type": "online"}, {"store": "Majac Medical", "url": "https://majacmedical.com.au/products/hydro-e-natural-hospital-grade-disinfectant-non-toxic/", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-laundry-detergent",
-              "name": "Laundry detergent",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Resparkle Fragrance-Free Laundry Powder",
-                  "buy": [{"store": "Resparkle (brand site, online only)", "url": "https://resparkle.com.au/products/natural-laundry-powder", "type": "online"}]
-                },
-                {
-                  "name": "Herbon Fragrance-Free",
-                  "buy": [{"store": "Herbon (brand site + store locator)", "url": "https://herbon.com.au/", "type": "online"}, {"store": "Cleaners Gallery", "url": "https://cleanersgallery.com.au/products/herbon-laundry-liquid-fragrance-free-1-25-lt-2lt-20lt", "type": "online"}, {"store": "Michael's Chemist", "url": "https://michaelschemist.com.au/products/herbon-laundry-liquid-fragrance-free-125l", "type": "online"}, {"store": "IGA (some stores)", "type": "in-store"}]
-                },
-                {
-                  "name": "Abode Zero Laundry Powder",
-                  "buy": [{"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122172663/abode-laundry-powder-zero-1kg", "type": "online"}, {"store": "BIG W (online)", "url": "https://www.bigw.com.au/product/abode-laundry-powder-zero-1kg/p/9900694629", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-laundry-soaker-stain",
-              "name": "Laundry soaker/stain",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Hudstone Soaker",
-                  "buy": [{"store": "Hudstone (brand site)", "url": "https://hudstonehome.com/products/hudstone-pre-soaker-2kg-80-soaks-per-bag", "type": "online"}, {"store": "Hudstone refill (Taren Point NSW)", "url": "https://hudstonehome.com/pages/refill", "type": "in-store"}]
-                },
-                {
-                  "name": "Kin Kin Laundry Soaker",
-                  "buy": [{"store": "Shop Naturally", "url": "https://www.shopnaturally.com.au/product/kinkin-laundry-soaker/", "type": "online"}, {"store": "Market Organics", "url": "https://shop.marketorganics.com.au/lines/kin-kin-naturals-laundry-soaker-stain-rem-lime-euc-1-2kg-1g", "type": "online"}]
-                },
-                {
-                  "name": "MiEco sodium percarbonate",
-                  "buy": [{"store": "MiEco (brand site)", "url": "https://mieco.com.au/product/mieco-oxygen-bleach-900g/", "type": "online"}, {"store": "Santos Organics", "url": "https://santosorganics.com.au/products/oxygen-bleach-900g-mieco", "type": "in-store + online"}, {"store": "Earth Wholefoods", "url": "https://earthwholefood.com.au/product/mieco-oxygen-bleach-900g/", "type": "in-store + online"}, {"store": "Manna Wholefoods (WA)", "url": "https://shop.mannawholefoods.com.au/lines/mieco-oxygen-bleach-900g", "type": "in-store + online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-dishwasher",
-              "name": "Dishwasher",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Hudstone Dishwashing Powder",
-                  "buy": [{"store": "Hudstone (brand site)", "url": "https://hudstonehome.com/products/dishwashing-powder", "type": "online"}, {"store": "The Fill Market", "url": "https://www.thefillmarket.com/brands/hudstone-cleaning-products", "type": "online"}]
-                },
-                {
-                  "name": "Kin Kin Dishwasher Powder",
-                  "buy": [{"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122347493", "type": "online"}, {"store": "BIG W (online)", "url": "https://www.bigw.com.au/product/kin-kin-naturals-eco-dishwash-powder-lime-and-lemon-myrtle-2-5kg/p/9900695196", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-hand-dishwashing",
-              "name": "Hand dishwashing",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Earth Choice Sensitive Concentrated",
-                  "buy": [{"store": "Earth Choice (brand site)", "url": "https://earthchoice.com.au/products/sensitive-concentrated-dishwashing-liquid-500ml", "type": "online"}, {"store": "IGA", "url": "https://www.igashop.com.au/product/earth-choice-concentrated-dishwashing-liquid-sensitive-180000007371", "type": "in-store + online"}, {"store": "Chemist Warehouse", "type": "in-store + online"}]
-                },
-                {
-                  "name": "ecostore Ultra Sensitive Dish",
-                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/742382/ecostore-dish-liquid-ultrasensitive", "type": "in-store + online"}, {"store": "ecostore (brand site)", "url": "https://ecostore.com/en-au/products/ultra-sensitive-dish-liquid-500ml", "type": "online"}]
-                },
-                {
-                  "name": "Abode Zero Dish Liquid",
-                  "buy": [{"store": "Woolworths (online, Healthylife)", "url": "https://www.woolworths.com.au/shop/productdetails/1122169583/abode-dishwashing-liquid-concentrate-zero", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-bathroom",
-              "name": "Bathroom",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "SimplyClean HealthyClean Bathroom",
-                  "buy": [{"store": "SimplyClean (brand site)", "url": "https://www.simplyclean.com.au/products/healthyclean-bathroom-500ml", "type": "online"}, {"store": "BIG W", "url": "https://www.bigw.com.au/product/simplyclean-healthyclean-bathroom-500ml/p/9906759408", "type": "online"}, {"store": "Vitalia", "url": "https://www.vitalia.com.au/simply-clean-Healthy-Clean-Bathroom-500ml", "type": "online"}, {"store": "Your Health Store", "url": "https://www.yourhealthstore.net.au/simply-clean-healthy-clean-bathroom-500ml", "type": "in-store + online"}]
-                },
-                {
-                  "name": "ecostore Bathroom Concentrate",
-                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/162051/ecostore-bathroom-shower-cleaner-refill-concentrate", "type": "in-store + online"}, {"store": "ecostore (brand site)", "url": "https://ecostore.com/en-au/products/bathroom-shower-cleaner-refill-concentrate-50ml", "type": "online"}, {"store": "Flora & Fauna", "url": "https://www.floraandfauna.com.au/products/ecostore-bathroom-shower-cleaner-citrus", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-toilet",
-              "name": "Toilet",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Abode Rosemary & Mint Toilet Gel",
-                  "buy": [{"store": "Healthylife (also via Woolworths online)", "url": "https://www.healthylife.com.au/products/abode-toilet-gel-rosemary-mint-750ml", "type": "online"}, {"store": "BIG W (online)", "url": "https://www.bigw.com.au/product/abode-toilet-gel-rosemary-mint/p/9904185922", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-mould",
-              "name": "Mould",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "SimplyClean Simply NO Mould",
-                  "buy": [{"store": "SimplyClean (brand site)", "url": "https://www.simplyclean.com.au/", "type": "online"}, {"store": "Woolworths", "type": "online"}, {"store": "Amazon AU", "type": "online"}, {"store": "Nourished Life", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-descaling",
-              "name": "Descaling",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Citric acid (any brand)",
-                  "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/344/mckenzies-acid-citric", "type": "in-store + online"}, {"store": "Coles", "url": "https://www.grocerize.com.au/product/7471437054035/mckenzie-s-citric-acid-75g", "type": "in-store + online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-multipurpose-wipes",
-              "name": "Multipurpose wipes",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "CleanLIFE Surface Vinegar Wipes (trial)",
-                  "buy": [{"store": "Chemist Warehouse", "url": "https://www.chemistwarehouse.com.au/buy/163550/cleanlife-surface-vinegar-wipes-100-pack", "type": "in-store + online"}, {"store": "Officeworks", "url": "https://www.officeworks.com.au/shop/officeworks/p/cleanlife-vinegar-cleaning-wipes-100-pack-mhcls00105", "type": "in-store + online"}, {"store": "Harris Farm", "url": "https://www.harrisfarm.com.au/products/clife-surface-biodegradable-vinegar-wipes-x100-100631", "type": "in-store + online"}, {"store": "CleanLIFE (store list)", "url": "https://cleanlife.com.au/stockists/", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-hand-sanitiser",
-              "name": "Hand sanitiser",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "PURELL Antiseptic Hand Foam 72%",
-                  "buy": [{"store": "RapidClean Gold Coast", "url": "https://rapidgc.com.au/products/prod-5791-04-aus00", "type": "in-store + online"}, {"store": "Sydney Cleaning Supplies", "url": "https://sydneycleaningsupplies.com.au/shop/chemicals/hand-sanitiser/purell-antiseptic-hand-foam-535ml/", "type": "online"}, {"store": "Hanleys", "url": "https://www.hanleys.com.au/purell-5791-antiseptic-sanitising-hand-foam-pump-bottle-535ml", "type": "online"}]
-                }
-              ]
-            }
+            {"id": "clean-general-surfaces-kitchen", "name": "General surfaces/kitchen", "options": [{"gold": true, "name": "1. Koh Universal Cleaner 2L ($19.95)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/907520", "type": "in-store + online"}]}, {"name": "2. ecostore Multi Purpose Concentrate Fresh Citrus 100mL ($9)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/6071364", "type": "in-store + online"}]}, {"name": "3. Wash Wild Multipurpose Spray 300mL ($3.90)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/199482", "type": "in-store + online"}]}]},
+            {"id": "clean-targeted-disinfection", "name": "Targeted disinfection", "options": [{"gold": true, "name": "1. Hydro-E HOCl Hospital Grade Disinfectant", "buy": [{"store": "Hydro-E (brand site)", "url": "https://www.hydro-e.com.au/products/hydro-e-hocl-hospital-grade-disinfectant-500ml-trigger-spray", "type": "online"}, {"store": "Enviro Chemicals", "url": "https://envirochemicals.com.au/product/hydro-e/", "type": "online"}, {"store": "Majac Medical", "url": "https://majacmedical.com.au/products/hydro-e-natural-hospital-grade-disinfectant-non-toxic/", "type": "online"}]}], "info": "No clean supermarket option: there's no HOCl disinfectant at Coles or Woolworths."},
+            {"id": "clean-laundry-detergent", "name": "Laundry detergent", "options": [{"gold": true, "name": "1. ecostore Ultra Sensitive Fragrance Free Laundry Liquid 1L ($7.70)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/757031", "type": "in-store + online"}]}, {"name": "2. ecostore Laundry Powder Lemon 1kg ($9, essential-oil scent)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/715821", "type": "in-store + online"}]}]},
+            {"id": "clean-laundry-soaker-stain", "name": "Laundry soaker/stain", "options": [{"gold": true, "name": "1. Hudstone Soaker", "buy": [{"store": "Hudstone (brand site)", "url": "https://hudstonehome.com/products/hudstone-pre-soaker-2kg-80-soaks-per-bag", "type": "online"}, {"store": "Hudstone refill (Taren Point NSW)", "url": "https://hudstonehome.com/pages/refill", "type": "in-store"}]}, {"name": "2. Kin Kin Laundry Soaker", "buy": [{"store": "Shop Naturally", "url": "https://www.shopnaturally.com.au/product/kinkin-laundry-soaker/", "type": "online"}, {"store": "Market Organics", "url": "https://shop.marketorganics.com.au/lines/kin-kin-naturals-laundry-soaker-stain-rem-lime-euc-1-2kg-1g", "type": "online"}]}, {"name": "3. Lectric Washing Soda 1kg ($5.25)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/263093", "type": "in-store + online"}]}], "info": "No clean oxygen soaker is sold by Coles or Woolworths themselves, so Hudstone stays the pick. Washing soda from Woolworths is a simple soak booster."},
+            {"id": "clean-dishwasher", "name": "Dishwasher", "options": [{"gold": true, "name": "1. Hudstone Dishwashing Powder", "buy": [{"store": "Hudstone (brand site)", "url": "https://hudstonehome.com/products/dishwashing-powder", "type": "online"}, {"store": "The Fill Market", "url": "https://www.thefillmarket.com/brands/hudstone-cleaning-products", "type": "online"}]}, {"name": "2. Wash Wild Dishwasher Powder 1kg ($14)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/703883", "type": "in-store + online"}]}], "info": "No supermarket dishwasher product fully fits: ecostore powder and tablets contain ethoxylated surfactants, and Wash Wild is clean but scored only 58% in CHOICE testing (weak on coffee and red wine). Hudstone stays the pick."},
+            {"id": "clean-hand-dishwashing", "name": "Hand dishwashing", "options": [{"gold": true, "name": "1. ecostore Ultra Sensitive Dish Liquid 500mL ($3.50)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/742382", "type": "in-store + online"}]}, {"name": "2. Wash Wild Dishwashing Liquid 1L ($6.95, essential oils)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/198810", "type": "in-store + online"}]}]},
+            {"id": "clean-bathroom", "name": "Bathroom", "options": [{"gold": true, "name": "1. ecostore Bathroom & Shower Refill Concentrate Fresh Citrus 100mL ($9)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/6071394", "type": "in-store + online"}]}]},
+            {"id": "clean-toilet", "name": "Toilet", "options": [{"gold": true, "name": "1. ecostore Toilet Cleaner Eucalyptus 500mL ($7)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/78314", "type": "in-store + online"}]}]},
+            {"id": "clean-mould", "name": "Mould", "options": [{"gold": true, "name": "1. Vin a Clean Cleaning Vinegar 2L ($3.85)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/24472", "type": "in-store + online"}]}], "info": "Vinegar is the clean supermarket option for mould. SimplyClean No Mould is only sold by a third-party seller on Woolworths."},
+            {"id": "clean-descaling", "name": "Descaling", "options": [{"gold": true, "name": "1. McKenzie's Citric Acid 150g ($5)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/278658", "type": "in-store + online"}]}]},
+            {"id": "clean-multipurpose-wipes", "name": "Multipurpose wipes", "options": [{"gold": true, "name": "1. Saba Organics Multi Purpose Wipes Lemon Burst 120pk ($13)", "buy": [{"store": "Woolworths", "url": "https://www.woolworths.com.au/shop/productdetails/906921", "type": "in-store + online"}]}]},
+            {"id": "clean-hand-sanitiser", "name": "Hand sanitiser", "options": [{"gold": true, "name": "1. PURELL Antiseptic Hand Foam 72%", "buy": [{"store": "RapidClean Gold Coast", "url": "https://rapidgc.com.au/products/prod-5791-04-aus00", "type": "in-store + online"}, {"store": "Sydney Cleaning Supplies", "url": "https://sydneycleaningsupplies.com.au/shop/chemicals/hand-sanitiser/purell-antiseptic-hand-foam-535ml/", "type": "online"}, {"store": "Hanleys", "url": "https://www.hanleys.com.au/purell-5791-antiseptic-sanitising-hand-foam-pump-bottle-535ml", "type": "online"}]}], "info": "No clean supermarket option: Woolworths sanitisers are fragranced or use carbomer (an acrylic polymer)."}
           ]
         },
         {
           "id": "cleaning-optional",
           "title": "Optional",
           "items": [
-            {
-              "id": "clean-opt-koala-eco-fragrance-free-laundry-stain-s",
-              "name": "Laundry stain spray",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Koala Eco Fragrance-Free Laundry Stain Spray",
-                  "buy": [{"store": "Koala Eco (brand site)", "url": "https://koala.eco/products/laundry-stain-spray", "type": "online"}]
-                }
-              ]
-            },
-            {
-              "id": "clean-opt-koala-eco-fragrance-free-oxygenated-blea",
-              "name": "Oxygen bleach",
-              "options": [
-                {
-                  "gold": true,
-                  "name": "Koala Eco Fragrance-Free Oxygenated Bleach",
-                  "buy": [{"store": "Koala Eco (brand site)", "url": "https://koala.eco/products/oxygenated-bleach-brighten-whiten", "type": "online"}]
-                }
-              ]
-            }
+            {"id": "clean-opt-koala-eco-fragrance-free-laundry-stain-s", "name": "Laundry stain spray", "options": [{"gold": true, "name": "1. Koala Eco Fragrance-Free Laundry Stain Spray", "buy": [{"store": "Koala Eco (brand site)", "url": "https://koala.eco/products/laundry-stain-spray", "type": "online"}]}], "info": "No clean supermarket option. Koala Eco is only sold by third-party sellers on Woolworths."},
+            {"id": "clean-opt-koala-eco-fragrance-free-oxygenated-blea", "name": "Oxygen bleach", "options": [{"gold": true, "name": "1. Koala Eco Fragrance-Free Oxygenated Bleach", "buy": [{"store": "Koala Eco (brand site)", "url": "https://koala.eco/products/oxygenated-bleach-brighten-whiten", "type": "online"}]}], "info": "No clean supermarket option. Koala Eco is only sold by third-party sellers on Woolworths."}
           ]
         }
       ]
