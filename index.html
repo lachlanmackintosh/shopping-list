@@ -14,12 +14,15 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
   <div class="app">
     <header class="top">
-      <p class="kicker">For the week</p>
+      <div class="kicker-row">
+        <p class="kicker">For the week</p>
+        <button type="button" class="clear-checks" id="clear-checks" disabled aria-label="Clear checks, nothing is checked">Clear checks</button>
+      </div>
       <div class="title-row">
         <div class="wordmark">
           <h1>Shopping</h1>
@@ -59,6 +62,6 @@
   </div>
 
   <script src="data.js?v=25"></script>
-  <script src="app.js?v=25"></script>
+  <script src="app.js?v=26"></script>
 </body>
 </html>
