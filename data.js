@@ -75,11 +75,6 @@ var SHOPPING = {
               "id": "beef-chuck",
               "name": "Beef chuck",
               "qty": "440 g per slow cooker night"
-            },
-            {
-              "id": "beef-cheek",
-              "name": "Beef cheek",
-              "qty": "370 g per slow cooker night"
             }
           ]
         },
@@ -488,6 +483,10 @@ var SHOPPING = {
             {
               "id": "chewing-gum",
               "name": "Chewing gum"
+            },
+            {
+              "id": "rice-cakes",
+              "name": "Organic rice cakes or rice crackers"
             },
             {
               "id": "apple-cider-vinegar",
