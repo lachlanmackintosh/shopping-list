@@ -180,6 +180,25 @@
     return { done: done, total: items.length };
   }
 
+  function hasCheckedItems() {
+    var ticks = state.ticks || {};
+    for (var id in ticks) {
+      if (Object.prototype.hasOwnProperty.call(ticks, id) && ticks[id]) return true;
+    }
+    return false;
+  }
+
+  function syncClearChecksButton() {
+    var btn = document.getElementById("clear-checks");
+    if (!btn) return;
+    var checked = hasCheckedItems();
+    btn.disabled = !checked;
+    btn.setAttribute(
+      "aria-label",
+      checked ? "Clear checks for the next shop" : "Clear checks, nothing is checked"
+    );
+  }
+
   function groupItems(group) {
     var all = [];
     visibleSections(group).forEach(function (section) {
@@ -360,6 +379,7 @@
       tabs[i].tabIndex = on ? 0 : -1;
     }
     document.getElementById("list").setAttribute("aria-labelledby", "tab-" + activeGroup);
+    syncClearChecksButton();
   }
 
   function render() {
@@ -756,6 +776,13 @@
     });
     document.getElementById("confirm-cancel").addEventListener("click", closeConfirm);
     document.getElementById("confirm-ok").addEventListener("click", clearTicks);
+    document.getElementById("clear-checks").addEventListener("click", function () {
+      if (!hasCheckedItems()) {
+        syncClearChecksButton();
+        return;
+      }
+      clearTicks();
+    });
 
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") return;
