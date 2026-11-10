@@ -491,6 +491,10 @@ var SHOPPING = {
             {
               "id": "apple-cider-vinegar",
               "name": "Apple cider vinegar (raw, unfiltered, with the mother)"
+            },
+            {
+              "id": "rice-cakes",
+              "name": "Organic rice cakes or rice crackers"
             }
           ]
         },
